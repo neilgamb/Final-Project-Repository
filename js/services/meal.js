@@ -21,15 +21,17 @@ module.exports = {
                         // is_complete: false, // 'false' = incomplete 'true' = complete // <= maybe an idea for later
                         
                         // USER INPUTS
-                        name: document.getElementById('name').value,
-                        recipe: document.getElementById('recipe').value,
-                        available: document.getElementById('available'),
+                        name: document.getElementById('meal_name').value,
+                        recipe: document.getElementById('recipe_url').value,
+                        pickup_time: document.getElementById('pickup_time').value,
                         category: document.getElementById('category').value,
-                        add_info: document.getElementById('addInfo').value,
+                        add_info: document.getElementById('add_info').value,
                     }
 
                     availableMeals.push(meal);
                 }
+
+                console.log(availableMeals);
             }
         }
     }
