@@ -1,5 +1,16 @@
-
 const app = angular.module('MealApp', ['ui.router']);
+
+const controllers = [
+
+];
+
+// for loop to bring controllers
+
+const mealService = require('./services/meal');
+app.factory(mealService.name, mealService.func);
+
+const userService = require('./services/user');
+app.factory(userService.name, userService.func);
 
 app.config(function ($stateProvider) {
 
@@ -42,30 +53,37 @@ app.config(function ($stateProvider) {
 });
 
 app.component('startPage', {
-
+    templateUrl: 'templates/start.html',
+    controller: 'StartController',
 });
 
 app.component('homePage', {
-
+    templateUrl: 'templates/home.html',
+    controller: '???', // not sure what controller to use here
 });
 
 app.component('cookPage', {
-
+    templateUrl: 'templates/cook.html',
+    controller: 'CookController',
 });
 
 app.component('cookconfirmPage', {
-
+    templateUrl: 'templates/cook-confirm.html',
+    controller: 'CookController',
 });
 
 app.component('meallistPage', {
-
+    templateUrl: 'templates/meal-list.html',
+    controller: 'MealListController',
 });
 
 app.component('mealdetailPage', {
-
+    templateUrl: 'templates/meal-detail.html',
+    controller: 'MealDetailController',
 });
 
 app.component('eatconfirmPage', {
-
+    templateUrl: 'templates/eat-confirm.html',
+    controller: 'CookController',
 });
 
