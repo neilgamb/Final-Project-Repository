@@ -1,7 +1,7 @@
 
 const app = angular.module('MealApp', ['ui.router']);
 
-app.config(function ($stateProvider){
+app.config(function ($stateProvider) {
 
     $stateProvider.state({
         name: 'start',
@@ -38,6 +38,34 @@ app.config(function ($stateProvider){
         url: '/eat-confirm',
         component: 'eatconfirmPage',
     });
+
+});
+
+app.component('startPage', {
+
+});
+
+app.component('homePage', {
+
+});
+
+app.component('cookPage', {
+
+});
+
+app.component('cookconfirmPage', {
+
+});
+
+app.component('meallistPage', {
+
+});
+
+app.component('mealdetailPage', {
+
+});
+
+app.component('eatconfirmPage', {
 
 });
 
