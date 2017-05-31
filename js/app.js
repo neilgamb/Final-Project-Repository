@@ -3,6 +3,7 @@ const app = angular.module('MealApp', ['ui.router']);
 const controllers = [
     require('./controllers/home'),
     require('./controllers/cook'),
+    require('./controllers/start'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
