@@ -2,10 +2,14 @@
 const app = angular.module('MealApp', ['ui.router']);
 
 const controllers = [
-
+    require('./controllers/home'),
 ];
 
 // for loop to bring controllers
+
+for (let i = 0; i < controllers.length; i++) {
+    app.controller(controllers[i].name, controllers[i].func);
+}
 
 const mealService = require('./services/meal');
 app.factory(mealService.name, mealService.func);
@@ -60,7 +64,7 @@ app.component('startPage', {
 
 app.component('homePage', {
     templateUrl: 'templates/home.html',
-    controller: '???', // not sure what controller to use here
+    controller: 'HomeController', // not sure what controller to use here
 });
 
 app.component('cookPage', {
@@ -89,7 +93,14 @@ app.component('eatconfirmPage', {
 });
 
 
-},{"./services/meal":2,"./services/user":3}],2:[function(require,module,exports){
+},{"./controllers/home":2,"./services/meal":3,"./services/user":4}],2:[function(require,module,exports){
+module.exports = {
+    name: 'HomeController',
+    func: function ($scope, $stateParams, MealService) {
+        console.log('it worked');
+    },
+}
+},{}],3:[function(require,module,exports){
 module.exports = {
     name: 'MealService',
     func: function ($http) {
@@ -126,6 +137,6 @@ module.exports = {
         }
     }
 }
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 
 },{}]},{},[1]);
