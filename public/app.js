@@ -3,6 +3,7 @@ const app = angular.module('MealApp', ['ui.router']);
 
 const controllers = [
     require('./controllers/home'),
+    require('./controllers/start'),
 ];
 
 // for loop to bring controllers
@@ -93,7 +94,7 @@ app.component('eatconfirmPage', {
 });
 
 
-},{"./controllers/home":2,"./services/meal":3,"./services/user":4}],2:[function(require,module,exports){
+},{"./controllers/home":2,"./controllers/start":3,"./services/meal":4,"./services/user":5}],2:[function(require,module,exports){
 module.exports = {
     name: 'HomeController',
     func: function ($scope, $stateParams, MealService) {
@@ -101,6 +102,15 @@ module.exports = {
     },
 }
 },{}],3:[function(require,module,exports){
+module.exports = {
+
+    name: 'StartController',
+    func: function ($scope, $stateParams, UserService) {
+        console.log('Log-in page works');
+    },
+
+};
+},{}],4:[function(require,module,exports){
 module.exports = {
     name: 'MealService',
     func: function ($http) {
@@ -137,6 +147,14 @@ module.exports = {
         }
     }
 }
-},{}],4:[function(require,module,exports){
-
+},{}],5:[function(require,module,exports){
+module.exports = {
+    name: 'UserService',
+    func: function ($http) {
+        console.log('Hello!')
+        return {
+            // something probably goes here, I just don't know what
+        };
+    },
+}
 },{}]},{},[1]);
