@@ -2,6 +2,7 @@ const app = angular.module('MealApp', ['ui.router']);
 
 const controllers = [
     require('./controllers/home'),
+    require('./controllers/start'),
 ];
 
 // for loop to bring controllers
