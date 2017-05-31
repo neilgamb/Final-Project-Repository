@@ -1,2 +1,2 @@
 # Final-Project-Repository
-File repository for TIY meal-share final project application
+File repository for TIY meal-share final project application.
