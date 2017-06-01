@@ -22,7 +22,7 @@ module.exports = {
             },
 
             getMeals() {
-                $http.get('https://thawing-waters-96173.herokuapp.com/').then(function (response) {
+                $http.get('get request url').then(function (response) {
                     // find out what the length of response is (how many meals?)
                     // loop through and push object into availableMeals array
 
