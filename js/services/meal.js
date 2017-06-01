@@ -8,12 +8,17 @@ module.exports = {
 
             postMeal(meal) {
 
-                for(let i = 0; i < meal.servings; i++){
+                    $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal);
 
-                    availableMeals.push(meal);
-                }
+                console.log('meal posted');
+            },
 
-                console.log(availableMeals);
+            getMeals() {
+                $http.get('get request url').then(function (response) {
+                    // find out what the length of response is (how many meals?)
+                    // loop through and push object into availableMeals array
+
+                });
             }
         }
     }
