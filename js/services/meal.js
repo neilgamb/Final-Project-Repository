@@ -17,8 +17,8 @@ module.exports = {
 
                 for (let i = 0; i < meal.servings; i++) {
 
-                    $http.post('https://thawing-waters-96173.herokuapp.com/', meal);
-                }
+                    $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal);
+                };
             },
 
             getMeals() {
