@@ -1,1 +1,15 @@
+
+<section class="results">
+
 <h1>Meal List</h1>
+
+   <ul>
+        <li class="mealitems" ng-repeat="meal in availableMeals">
+            <!--<h3><a ui-sref="details({productId:item.id})">{{item.name}}</a></h3>-->
+            <h3>{{ meal.name }}</h3> 
+            <p>{{ item.servingCount}}</p>
+            <p>{{ item.category }}</p>
+        </li>
+    </ul>
+
+</section>

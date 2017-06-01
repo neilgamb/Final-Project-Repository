@@ -8,12 +8,25 @@ module.exports = {
 
             postMeal(meal) {
 
-                for(let i = 0; i < meal.servings; i++){
+                // for (let i = 0; i < meal.servings; i++) {
 
-                    availableMeals.push(meal);
+                //     availableMeals.push(meal);
+                // }
+
+                // console.log(availableMeals); <== this is the old code 
+
+                for (let i = 0; i < meal.servings; i++) {
+
+                    $http.post('https://thawing-waters-96173.herokuapp.com/', meal);
                 }
+            },
 
-                console.log(availableMeals);
+            getMeals() {
+                $http.get('https://thawing-waters-96173.herokuapp.com/').then(function (response) {
+                    // find out what the length of response is (how many meals?)
+                    // loop through and push object into availableMeals array
+
+                });
             }
         }
     }
