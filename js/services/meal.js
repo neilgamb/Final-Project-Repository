@@ -8,17 +8,9 @@ module.exports = {
 
             postMeal(meal) {
 
-                // for (let i = 0; i < meal.servings; i++) {
-
-                //     availableMeals.push(meal);
-                // }
-
-                // console.log(availableMeals); <== this is the old code 
-
-                for (let i = 0; i < meal.servings; i++) {
-
                     $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal);
-                };
+
+                console.log('meal posted');
             },
 
             getMeals() {
