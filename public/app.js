@@ -140,8 +140,6 @@ module.exports = {
 
             postMeal(meal) {
 
-                // const servings = $scope.servings;
-
                 for(let i = 0; i < meal.servings; i++){
 
                     availableMeals.push(meal);

@@ -10,10 +10,9 @@ module.exports = {
 
                 for(let i = 0; i < meal.servings; i++){
 
-                    availableMeals.push(meal);
+                    $http.post('keiths heroku url', meal);
                 }
 
-                console.log(availableMeals);
             }
         }
     }
