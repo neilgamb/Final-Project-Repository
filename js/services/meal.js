@@ -14,9 +14,10 @@ module.exports = {
             },
 
             getMeals() {
-                $http.get('get request url').then(function (response) {
+                $http.get('https://thawing-waters-96173.herokuapp.com/all-meals').then(function (response) {
                     // find out what the length of response is (how many meals?)
                     // loop through and push object into availableMeals array
+                    console.log(response.data);
 
                 });
             }
