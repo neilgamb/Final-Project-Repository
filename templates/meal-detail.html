@@ -1,1 +1,9 @@
-<h1>Meal Detail</h1>
+<section class="mealDetail">
+
+    <h1>{{ meal.name }}</h1>
+    <h3>{{ meal.category }}</h3>
+    <a href={{meal.recipe}}>Recipe</a>
+    <p>Available Servings: {{ meal.servingCount}}</p>
+    <p>Available for Pickup at: {{meal.availableTime }}</p>
+
+</section>
