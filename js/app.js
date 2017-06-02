@@ -7,6 +7,7 @@ const controllers = [
     require('./controllers/meal-list'),
     require('./controllers/meal'),
     require('./controllers/cook-confirm'),
+    require('./controllers/eat-confirm'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
