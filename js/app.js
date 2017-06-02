@@ -92,6 +92,6 @@ app.component('mealdetailPage', {
 
 app.component('eatconfirmPage', {
     templateUrl: 'templates/eat-confirm.html',
-    controller: 'MealDetailController',
+    controller: 'EatConfirmController',
 });
 
