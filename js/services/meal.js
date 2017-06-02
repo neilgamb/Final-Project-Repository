@@ -2,12 +2,24 @@ module.exports = {
     name: 'MealService',
     func: function ($http) {
 
+        let lastMeal = {};
 
         return {
 
             postMeal(meal) {
 
-                $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal);
+                $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal).then(function(response){
+
+                    // lastMeal = response.data;
+                    angular.copy(response.data, lastMeal);
+                    console.log(lastMeal);
+                }); 
+
+            },
+
+            getLastMeal(){
+
+                return lastMeal;
 
             },
 
