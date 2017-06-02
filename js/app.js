@@ -4,6 +4,8 @@ const controllers = [
     require('./controllers/home'),
     require('./controllers/cook'),
     require('./controllers/start'),
+    require('./controllers/meal-list'),
+    require('./controllers/meal'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -88,6 +90,6 @@ app.component('mealdetailPage', {
 
 app.component('eatconfirmPage', {
     templateUrl: 'templates/eat-confirm.html',
-    controller: 'CookController',
+    controller: 'MealDetailController',
 });
 

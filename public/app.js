@@ -5,6 +5,8 @@ const controllers = [
     require('./controllers/home'),
     require('./controllers/cook'),
     require('./controllers/start'),
+    require('./controllers/meal-list'),
+    require('./controllers/meal'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -89,11 +91,11 @@ app.component('mealdetailPage', {
 
 app.component('eatconfirmPage', {
     templateUrl: 'templates/eat-confirm.html',
-    controller: 'CookController',
+    controller: 'MealDetailController',
 });
 
 
-},{"./controllers/cook":2,"./controllers/home":3,"./controllers/start":4,"./services/meal":5,"./services/user":6}],2:[function(require,module,exports){
+},{"./controllers/cook":2,"./controllers/home":3,"./controllers/meal":5,"./controllers/meal-list":4,"./controllers/start":6,"./services/meal":7,"./services/user":8}],2:[function(require,module,exports){
 module.exports = {
     name: 'CookController',
     func: function ($scope, $stateParams, MealService) {
@@ -122,6 +124,34 @@ module.exports = {
 }
 },{}],4:[function(require,module,exports){
 module.exports = {
+    name: 'MealListController',
+    func: function ($scope, $stateParams, MealService) {
+        $scope.availableMeals = MealService.getMeals();
+    
+    },
+};
+},{}],5:[function(require,module,exports){
+module.exports = {
+    name: 'MealDetailController',
+    func: function ($scope, $stateParams, MealService) {
+
+        $scope.meal = MealService.getOneMeal($stateParams.mealID);
+
+        $scope.addOrder = function (order) {
+
+            const newOrder = {
+                id: $stateParams.mealID,
+                servingCount: $scope.servingCount,
+                eta: $scope.eta,
+            };
+
+            MealService.postOrder(newOrder);
+        };
+},
+
+}   
+},{}],6:[function(require,module,exports){
+module.exports = {
 
     name: 'StartController',
     func: function ($scope, $stateParams, UserService) {
@@ -129,27 +159,70 @@ module.exports = {
     },
 
 };
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 module.exports = {
     name: 'MealService',
     func: function ($http) {
 
-        const availableMeals = [];
 
         return {
 
             postMeal(meal) {
 
-                for(let i = 0; i < meal.servings; i++){
+                $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal);
 
-                    $http.post('keiths heroku url', meal);
+            },
+
+            getMeals() {
+
+                const availableMeals = [];
+
+                $http.get('https://thawing-waters-96173.herokuapp.com/all-meals').then(function (response) {
+
+                    console.log(response.data);
+
+                    for (let i = 0; i < response.data.length; i++) {
+                        availableMeals.push(response.data[i]);
+                    };
+
+                });
+
+                return availableMeals;
+            },
+
+            getOneMeal(mealID) {
+
+                const meal = {
+                    name: '',
+                    recipe: '',
+                    servingCount: null,
+                    availableTime: '',
+                    category: '',
+                };
+
+                $http.get('https://thawing-waters-96173.herokuapp.com/select-meal/' + mealID).then(function (response) {
+
+                    meal.name = response.data.name;
+                    meal.recipe = response.data.recipe;
+                    meal.servingCount = response.data.servingCount;
+                    meal.availableTime = response.data.availableTime;
+                    meal.category = response.data.category;
+
+                });
+
+                return meal;
+            },
+
+            postOrder(order) {
+
+                for (let i = 0; i < order.servingCount; i++) {
+                    // $http.post('tbd', order);
                 }
-
-            }
+            },
         }
     }
 }
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports = {
     name: 'UserService',
     func: function ($http) {

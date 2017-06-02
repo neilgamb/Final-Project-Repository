@@ -1,1 +1,28 @@
-<h1>Meal Detail</h1>
+<section class="mealDetail">
+
+    <h1>{{ meal.name }}</h1>
+    <h3>{{ meal.category }}</h3>
+    <a href={{meal.recipe}}>Recipe</a>
+    <p>Available Servings: {{ meal.servingCount}}</p>
+    <p>Available for Pickup at: {{meal.availableTime }}</p>
+
+    <span>How many servings do you want? </span><select ng-model="servingCount" name="servings">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select><br><br>
+
+    <span>What is your ETA? </span><input type="text" ng-model="eta" data-format="h:mm" placeholder="Enter ETA"><br><br>
+
+    <button ng-click='addOrder()'>Place Order</button>
+
+</section>
