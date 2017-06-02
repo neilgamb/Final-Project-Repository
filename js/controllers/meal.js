@@ -7,13 +7,13 @@ module.exports = {
         $scope.addOrder = function (order) {
 
             const newOrder = {
-                id: $stateParams.mealID,
-                servingCount: $scope.servingCount,
                 eta: $scope.eta,
+                id: $stateParams.mealID
             };
 
             MealService.postOrder(newOrder);
         };
+
 },
 
 }   
