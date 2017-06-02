@@ -4,7 +4,8 @@ const controllers = [
     require('./controllers/home'),
     require('./controllers/cook'),
     require('./controllers/start'),
-    require('./controllers/meal-list')
+    require('./controllers/meal-list'),
+    require('./controllers/meal'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
