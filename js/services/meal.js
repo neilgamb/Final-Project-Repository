@@ -2,7 +2,6 @@ module.exports = {
     name: 'MealService',
     func: function ($http) {
 
-        const availableMeals = [];
 
         return {
 
@@ -10,10 +9,12 @@ module.exports = {
 
                 $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal);
 
-                console.log('meal posted');
             },
 
             getMeals() {
+
+                const availableMeals = [];
+
                 $http.get('https://thawing-waters-96173.herokuapp.com/all-meals').then(function (response) {
 
                     console.log(response.data);
@@ -27,7 +28,7 @@ module.exports = {
                 return availableMeals;
             },
 
-            getOneMeal(mealID){
+            getOneMeal(mealID) {
 
                 const meal = {
                     name: '',
@@ -48,6 +49,13 @@ module.exports = {
                 });
 
                 return meal;
+            },
+
+            postOrder(order) {
+
+                for (let i = 0; i < order.servingCount; i++) {
+                    // $http.post('tbd', order);
+                }
             },
         }
     }
