@@ -3,21 +3,21 @@ module.exports = {
     func: function ($http) {
 
         let lastMeal = {};
+        let lastOrder = {};
 
         return {
 
             postMeal(meal) {
 
-                $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal).then(function(response){
+                $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal).then(function (response) {
 
-                    // lastMeal = response.data;
                     angular.copy(response.data, lastMeal);
-                    console.log(lastMeal);
-                }); 
+
+                });
 
             },
 
-            getLastMeal(){
+            getLastMeal() {
 
                 return lastMeal;
 
@@ -28,8 +28,6 @@ module.exports = {
                 const availableMeals = [];
 
                 $http.get('https://thawing-waters-96173.herokuapp.com/all-meals').then(function (response) {
-
-                    console.log(response.data);
 
                     for (let i = 0; i < response.data.length; i++) {
                         availableMeals.push(response.data[i]);
@@ -65,9 +63,21 @@ module.exports = {
 
             postOrder(order) {
 
-                for (let i = 0; i < order.servingCount; i++) {
-                    // $http.post('tbd', order);
-                }
+                console.log(order.id);
+
+
+                    $http.put('https://thawing-waters-96173.herokuapp.com/reserve-serving/' + order.id, order).then(function (response) {
+
+                        angular.copy(response.data, lastOrder);
+                        console.log(lastOrder);
+
+                    });
+            },
+
+            getLastOrder(){
+
+                return lastOrder;
+
             },
         }
     }
