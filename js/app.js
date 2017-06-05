@@ -7,7 +7,8 @@ const controllers = [
     require('./controllers/meal-list'),
     require('./controllers/meal'),
     require('./controllers/cook-confirm'),
-    require('./controllers/eat-confirm')
+    require('./controllers/eat-confirm'),
+    require('./controllers/sign-up'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -57,7 +58,11 @@ app.config(function ($stateProvider) {
         url: '/eat-confirm',
         component: 'eatconfirmPage',
     });
-
+    $stateProvider.state({
+        name: 'signup',
+        url: '/sign-up',
+        component: 'signupPage',
+    });
 });
 
 app.component('startPage', {
@@ -94,4 +99,10 @@ app.component('eatconfirmPage', {
     templateUrl: 'templates/eat-confirm.html',
     controller: 'EatConfirmController',
 });
+
+app.component('signupPage', {
+    templateUrl: 'templates/sign-up.html',
+    controller: 'SignUpController',
+});
+
 

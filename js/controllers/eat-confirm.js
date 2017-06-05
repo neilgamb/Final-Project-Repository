@@ -1,4 +1,5 @@
 module.exports = {
+    
     name: 'EatConfirmController',
     func: function ($scope, $stateParams, MealService) {
 
@@ -6,3 +7,6 @@ module.exports = {
 
     },
 };   
+
+}
+
