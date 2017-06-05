@@ -1,8 +1,8 @@
 module.exports = {
     name: 'CookController',
     func: function ($scope, $stateParams, MealService) {
-        
-            $scope.add = function(meal){
+
+        $scope.add = function (meal) {
 
             const newMeal = {
                 name: $scope.meal_name,
@@ -17,7 +17,7 @@ module.exports = {
                 zipcode: $scope.zipcode,
             };
 
-                MealService.postMeal(newMeal);
-            }
+            MealService.postMeal(newMeal);
+        };
     },
 };
