@@ -1,16 +1,28 @@
 module.exports = {
 
     name: 'SignUpController',
-    func: function ($scope, $stateParams, UserService) {
+    func: function ($scope, $state, $stateParams, UserService) {
 
-        console.log('Sign up page works');
-        $scope.addUser() = function (user) {
+        $scope.add = function(user){
+
             const newUser = {
                 username: $scope.username,
                 password: $scope.password,
-                contact_number: $scope.contact_number,
+                passwordConfirm: $scope.passwordConfirm,
+                phone: $scope.phone,
             };
-            UserService.addUser(newUser);
+
+            UserService.createUser(newUser).then(function(){
+
+                console.log('success');
+                $state.go('signupsuccess')
+
+            }).catch(function () {
+                
+                console.log('failure');
+                $scope.invalid = true;
+
+                });
         };
     },
 }
