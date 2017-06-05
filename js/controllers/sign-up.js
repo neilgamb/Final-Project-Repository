@@ -4,7 +4,7 @@ module.exports = {
     func: function ($scope, $stateParams, UserService) {
 
         console.log('Sign up page works');
-        $scope.addUser() = function (user) {
+        $scope.add() = function (user) {
             const newUser = {
                 username: $scope.username,
                 password: $scope.password,
