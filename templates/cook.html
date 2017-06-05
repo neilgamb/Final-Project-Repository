@@ -4,25 +4,6 @@
 
         <input type='text' ng-model="meal_name" placeholder="Enter Meal Name"><br>
 
-        <input type='text' id="recipe_url" ng-model="recipe_url" placeholder="Enter Reciple URL"><br>
-
-        <select ng-model="servings" name="servings">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select> <span> servings</span><br>
-
-        <input type="text" ng-model="pickup_time" data-format="h:mm" placeholder="Enter Pickup Time"> <br> <!-- look into http://vitalets.github.io/combodate/# -->
-
         <select ng-model="category" name="category">
             <option value="">Select Cuisine</option>
             <option value="american">American</option>
@@ -44,7 +25,33 @@
             <option value="other">Other</option>
         </select> <br>
 
-        <!--<input type='text' ng-model="add_info" placeholder="Additional Comments"><br>-->
+        <input type='text' id="recipe_url" ng-model="recipe_url" placeholder="Enter Reciple URL"><br>
+
+        <select ng-model="servings" name="servings">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select> <span> servings</span><br>
+
+        <input type="text" ng-model="pickup_time" data-format="h:mm" placeholder="Enter Pickup Time"> <br> <!-- look into http://vitalets.github.io/combodate/# -->
+
+        <p>Pickup Location:</p>
+        <input type="text" ng-model="street" placeholder="Street"><br>
+        <input type="text" ng-model="city" placeholder="City"><br>
+        <input type="text" ng-model="state" placeholder="State"><br>
+        <input type="text" ng-model="zipcode" placeholder="Zip Code"><br>
+
+
+        <input type='text' ng-model="add_info" placeholder="Additional Comments"><br>
 
         <a ui-sref="cookconfirm"><button ng-click='add()'>Start Cooking!</button></a>
 
