@@ -57,7 +57,11 @@ app.config(function ($stateProvider) {
         url: '/eat-confirm',
         component: 'eatconfirmPage',
     });
-
+    $stateProvider.state({
+        name: 'signup',
+        url: '/sign-up',
+        component: 'signupPage',
+    });
 });
 
 app.component('startPage', {
@@ -94,4 +98,10 @@ app.component('eatconfirmPage', {
     templateUrl: 'templates/eat-confirm.html',
     controller: 'EatConfirmController',
 });
+
+app.component('eatconfirmPage', {
+    templateUrl: 'templates/sign-up.html',
+    controller: 'SignUpController',
+});
+
 
