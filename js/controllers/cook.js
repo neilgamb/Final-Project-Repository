@@ -1,3 +1,6 @@
+var moment = require('moment');
+moment().format();
+
 module.exports = {
     name: 'CookController',
     func: function ($scope, $stateParams, MealService) {
@@ -8,7 +11,7 @@ module.exports = {
                 name: $scope.meal_name,
                 recipe: $scope.recipe_url,
                 servingCount: parseInt($scope.servings, 10),
-                availableTime: $scope.pickup_time,
+                availableTime: moment($scope.pickup_time.toISOString()),
                 category: $scope.category,
                 add_info: $scope.add_info,
                 street: $scope.street,
@@ -18,6 +21,7 @@ module.exports = {
             };
 
                 MealService.postMeal(newMeal);
+
             }
     },
 };
