@@ -10,6 +10,7 @@ module.exports = {
                 password: $scope.password,
                 contact_number: $scope.contact_number,
             };
+            UserService.addUser(newUser);
         };
     },
 }
