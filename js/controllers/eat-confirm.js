@@ -6,6 +6,7 @@ module.exports = {
         $scope.confirmedOrder = MealService.getLastOrder();
 
     },
+};   
 
 }
 

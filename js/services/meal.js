@@ -46,6 +46,11 @@ module.exports = {
                     servingCount: null,
                     availableTime: '',
                     category: '',
+                    street: '',
+                    city: '',
+                    state: '',
+                    zipcode: '',
+                    add_info: '',
                 };
 
                 $http.get('https://thawing-waters-96173.herokuapp.com/select-meal/' + mealID).then(function (response) {
@@ -55,15 +60,17 @@ module.exports = {
                     meal.servingCount = response.data.servingCount;
                     meal.availableTime = response.data.availableTime;
                     meal.category = response.data.category;
-
+                    meal.street = response.data.street;
+                    meal.city = response.data.city;
+                    meal.state = response.data.state;
+                    meal.zipcode = response.data.zipcode;
+                    meal.add_info = response.data.add_info;
                 });
 
                 return meal;
             },
 
             postOrder(order) {
-
-                console.log(order.id);
 
 
                     $http.put('https://thawing-waters-96173.herokuapp.com/reserve-serving/' + order.id, order).then(function (response) {
