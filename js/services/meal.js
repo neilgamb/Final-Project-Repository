@@ -1,3 +1,6 @@
+var moment = require('moment');
+moment().format();
+
 module.exports = {
     name: 'MealService',
     func: function ($http) {
@@ -58,7 +61,7 @@ module.exports = {
                     meal.name = response.data.name;
                     meal.recipe = response.data.recipe;
                     meal.servingCount = response.data.servingCount;
-                    meal.availableTime = response.data.availableTime;
+                    meal.availableTime = moment(response.data.availableTime).format('h:mmA');
                     meal.category = response.data.category;
                     meal.street = response.data.street;
                     meal.city = response.data.city;
