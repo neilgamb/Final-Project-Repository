@@ -8,9 +8,19 @@
         margin-bottom: 5%;
         text-align: center;
         font-size: 4em;
+
+        img {
+            width: 40%;
+        }
+
+        h1 {
+            margin: 0px;
+        }
     }
 
     div.login {
+        @include grid-column(10);
+        @include grid-column-offset(1);
         padding: 0px;
         text-align: center;
 
@@ -19,6 +29,10 @@
             color: white;
             padding-left: 20px;
             margin: 10px;
+
+            .fa {
+                margin-right: 10px;
+            }
 
             .username {
                 width: 90%;
@@ -29,7 +43,12 @@
             }
 
             ::-webkit-input-placeholder { /* Chrome */
-                color: white;
+                color: #D3ECEC;
+                // padding-left: 50px;
+            }
+
+            input, select, textarea{
+                color: #D3ECEC;
                 padding-left: 50px;
             }
 
@@ -51,35 +70,20 @@
 
         }
 
-        a {
+        button {
             display: block;  
             margin-bottom: 30px;
             font-size: 1.5em;
             text-align: center;
             text-decoration: none;
             background-color: #FFCB47;
-            padding: 10px;
+            padding: 20px;
             color: white;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 70px;
             font-size: 4em;
             margin-top: 50px;
-        }
-
-        a:link {
-            text-decoration: none;
-        }
-
-        a:visited {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        a:active {
-            text-decoration: none;
+            width: 100%;
         }
     }
 
@@ -89,9 +93,14 @@
         text-align: center;
         color: white;
         font-size: 2.5em;
+        position: fixed;
+        bottom: 5px;
 
         a {
             color: #4A5043;
         }
     }
 }
+
+
+
