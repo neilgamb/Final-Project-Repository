@@ -63,6 +63,11 @@ app.config(function ($stateProvider) {
         url: '/sign-up',
         component: 'signupPage',
     });
+    $stateProvider.state({
+        name: 'signupsuccess',
+        url: '/sign-up-success',
+        component: 'signupSuccessPage',
+    })
 });
 
 app.component('startPage', {
@@ -104,5 +109,9 @@ app.component('signupPage', {
     templateUrl: 'templates/sign-up.html',
     controller: 'SignUpController',
 });
+
+app.component('signupSuccessPage', {
+    templateUrl: 'templates/sign-up-success.html',
+})
 
 

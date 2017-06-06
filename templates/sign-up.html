@@ -6,11 +6,13 @@
 
     <p>Password: <input type="text" ng-model="password" placeholder="Enter Password"></p>
 
-    <p>Confirm Password: <input type="text" placeholder="Re-Enter Password"></p>
+    <p>Confirm Password: <input type="text" ng-model="passwordConfirm" placeholder="Re-Enter Password"></p>
 
-    <p>Contact Phone Number: <input type="text" ng-model="contact_number" placeholder="Ex: 555-555-5555"></p>
+    <p>Contact Phone Number: <input type="text" ng-model="phone" placeholder="Ex: 555-555-5555"></p>
 
-    <button>Submit</button>
+    <button ng-disabled="password != passwordConfirm" ng-click="add()">Submit</button>
+
+    <h2 ng-show="invalid == true">INVALID USERNAME!</h2>
 
 </section>
 
