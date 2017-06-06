@@ -9,7 +9,7 @@ const controllers = [
     require('./controllers/cook-confirm'),
     require('./controllers/eat-confirm'),
     require('./controllers/sign-up'),
-    equire('./controllers/chef-info'),
+    require('./controllers/chef-info'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
