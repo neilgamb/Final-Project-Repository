@@ -1,0 +1,37 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+$grid-row-width: 100em;
+
+$small: 640px;
+$med: 980px;
+
+@import "start";
+@import "sign-up";
+@import "sign-up-success";
+@import "home";
+@import "cook";
+@import "cook-confirm";
+@import "meal-list";
+@import "meal-detail";
+@import "eat-confirm";
+
+html {
+    height: 100%;
+}
+
+
+body {
+    background-image: -ms-linear-gradient(top right, #B6E5ED 0%, #9AC2C9 50%, #6B878C 100%);
+    background-image: -moz-linear-gradient(top right, #B6E5ED 0%, #9AC2C9 50%, #6B878C 100%);
+    background-image: -o-linear-gradient(top right, #B6E5ED 0%, #9AC2C9 50%, #6B878C 100%);
+    background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #B6E5ED), color-stop(50, #9AC2C9), color-stop(100, #6B878C));
+    background-image: -webkit-linear-gradient(top right, #B6E5ED 0%, #9AC2C9 50%, #6B878C 100%);
+    background-image: linear-gradient(to bottom left, #B6E5ED 0%, #9AC2C9 50%, #6B878C 100%);
+    background-repeat: no-repeat;
+
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
