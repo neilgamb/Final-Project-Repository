@@ -16,6 +16,8 @@ gulp.task('js', function () {
 })
 
 gulp.task('css', function () {
+    gulp.src('node_modules/noun_782403_cc WHITE.png')
+        .pipe(gulp.dest('public'))
     gulp.src('node_modules/font-awesome/**/*')
         .pipe(gulp.dest('public/font-awesome'))
     return gulp.src('scss/style.scss')
