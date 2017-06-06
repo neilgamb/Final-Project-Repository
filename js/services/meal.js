@@ -73,6 +73,28 @@ module.exports = {
                 return meal;
             },
 
+            getMealAddress(mealID) {
+
+                const meal = {
+                    street: '',
+                    city: '',
+                    state: '',
+                    zipcode: '',
+                };
+
+                return $http.get('https://thawing-waters-96173.herokuapp.com/select-meal/' + mealID).then(function (response) {
+
+                    meal.street = response.data.street;
+                    meal.city = response.data.city;
+                    meal.state = response.data.state;
+                    meal.zipcode = response.data.zipcode;
+
+                    return meal;
+                });
+
+                // return meal;
+            },
+
             postOrder(order) {
 
 
