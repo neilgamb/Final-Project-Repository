@@ -9,7 +9,7 @@ const controllers = [
     require('./controllers/cook-confirm'),
     require('./controllers/eat-confirm'),
     require('./controllers/sign-up'),
-    require('./controllers/chef-info'),
+    require('./controllers/user-info'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -68,7 +68,12 @@ app.config(function ($stateProvider) {
         name: 'signupsuccess',
         url: '/sign-up-success',
         component: 'signupSuccessPage',
-    })
+    });
+    $stateProvider.state({
+        name: 'userdetail',
+        url: '/user/:userID',
+        component: 'userInfo',
+    });
 });
 
 app.component('startPage', {
@@ -115,9 +120,9 @@ app.component('signupSuccessPage', {
     templateUrl: 'templates/sign-up-success.html',
 });
 
-app.component('chefInfo', {
-    templateUrl: 'templates/chef-info.html',
-    controller: 'ChefInfoController',
+app.component('userInfo', {
+    templateUrl: 'templates/user-info.html',
+    controller: 'UserInfoController',
 });
 
 

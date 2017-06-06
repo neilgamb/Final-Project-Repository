@@ -5,6 +5,7 @@
     <a href={{meal.recipe}}>Recipe</a>
     <p>Available Servings: {{ meal.servingCount}}</p>
     <p>Available for Pickup at: {{meal.availableTime }}</p>
+    <user-info></user-info>
 
     <span>How many servings do you want? </span><select ng-model="servingCount" name="servings">
         <option value="1">1</option>
