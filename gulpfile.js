@@ -16,6 +16,8 @@ gulp.task('js', function () {
 })
 
 gulp.task('css', function () {
+    gulp.src('node_modules/font-awesome/**/*')
+        .pipe(gulp.dest('public/font-awesome'))
     return gulp.src('scss/style.scss')
         .pipe(sass())
         .pipe(gulp.dest('public'));

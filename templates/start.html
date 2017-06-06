@@ -1,15 +1,19 @@
 <section class="start">
 
-    <h1>Start Page</h1>
+    <div class="logo">
 
-    <input type="text" class="username" placeholder="Enter Username"></input>
-    <input type="text" class="password" placeholder="Enter Password"></input>
+        <h1>Serv'd</h1>
+    
+    </div>
+    
+    <div class="login">
 
-    <a ui-sref="home">Log In!</a>
-    <!-- right now we've got it set up to route to the home page
-when you click "Log In!", ideally need an ng-click event that verifies username/password information 
-and ensures that it is correct before you can "move on" to the home page -->
+        <div><i class="fa fa-user" aria-hidden="true"></i><input type="text" class="username" placeholder="Username / Email"></input></div>
+        <div><i class="fa fa-lock" aria-hidden="true"></i><input type="text" class="password" placeholder="Password"></input></div>
+        <a ui-sref="home">LOG IN</a>
 
-    <p>Don't have an account? <a ui-sref="signup">Register Now!</a>
+    </div>
+
+    <p>Don't have an account? <a ui-sref="signup">Sign Up!</a>
 
 </section>
