@@ -2,7 +2,7 @@ module.exports = {
     name: 'UserService',
     func: function ($http) {
 
-        let currentChef = {};
+        
 
         return {
 
@@ -13,6 +13,7 @@ module.exports = {
             },
 
             getOneUser(userID) {
+                let currentChef = {};
                 $http.get('https://thawing-waters-96173.herokuapp.com/select-user/' + userID).then(function (response) {
                     console.log(response.data);
                     return user;

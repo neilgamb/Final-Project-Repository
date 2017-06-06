@@ -6,5 +6,9 @@ module.exports = {
         console.log($stateParams.mealID);
         $scope.user = UserService.getOneUser($stateParams.userID);
 
+        $scope.chefUser = {
+            name: 
+        }
+
     },
 };
