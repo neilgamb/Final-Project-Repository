@@ -3,12 +3,10 @@ module.exports = {
     name: 'UserInfoController',
     func: function ($scope, $stateParams, UserService) {
 
-        console.log($stateParams.mealID);
-        $scope.user = UserService.getOneUser($stateParams.userID);
+        console.log($stateParams.userID);
+        $scope.chef = UserService.getOneUser($stateParams.mealID);
 
-        $scope.chefUser = {
-            name: 
-        }
+        // call getOneMeal, 
 
     },
 };

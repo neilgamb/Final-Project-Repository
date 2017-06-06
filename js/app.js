@@ -70,7 +70,7 @@ app.config(function ($stateProvider) {
         component: 'signupSuccessPage',
     });
     $stateProvider.state({
-        name: 'userdetail',
+        name: 'userinfo',
         url: '/user/:userID',
         component: 'userInfo',
     });
@@ -123,6 +123,9 @@ app.component('signupSuccessPage', {
 app.component('userInfo', {
     templateUrl: 'templates/user-info.html',
     controller: 'UserInfoController',
+    bindings: {
+        target: '>' // it's either greater than or less than, try both
+    }
 });
 
 
