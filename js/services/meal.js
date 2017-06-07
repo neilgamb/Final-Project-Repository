@@ -97,11 +97,9 @@ module.exports = {
 
             postOrder(order) {
 
-
                     $http.put('https://thawing-waters-96173.herokuapp.com/reserve-serving/' + order.id, order).then(function (response) {
 
                         angular.copy(response.data, lastOrder);
-                        console.log(lastOrder);
 
                     });
             },
