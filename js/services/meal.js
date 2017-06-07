@@ -13,7 +13,7 @@ module.exports = {
             postMeal(meal) {
 
                 $http.post('https://thawing-waters-96173.herokuapp.com/new-meal', meal).then(function (response) {
-
+                    
                     angular.copy(response.data, lastMeal);
 
                 });

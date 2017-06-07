@@ -13,7 +13,7 @@ module.exports = {
             UserService.attemptLogin(loginInfo).then(function(){
 
                 console.log('success');
-                // $state.go('home')
+                $state.go('home')
 
             }).catch(function(){
                 console.log('failure');
