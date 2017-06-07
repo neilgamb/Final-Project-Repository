@@ -22,7 +22,11 @@ app.factory(mealService.name, mealService.func);
 const userService = require('./services/user');
 app.factory(userService.name, userService.func);
 
-app.config(function ($stateProvider) {
+app.config(function ($stateProvider, $httpProvider) {
+    // Added by Luke: 'always send cookie data with ajax requests'
+    // Necessary to make authenticated (logged in) requests after
+    // you're logged in from localhost.
+    $httpProvider.defaults.withCredentials = true;
 
     $stateProvider.state({
         name: 'start',
@@ -124,7 +128,7 @@ app.component('userInfo', {
     templateUrl: 'templates/user-info.html',
     controller: 'UserInfoController',
     bindings: {
-        target: '>' // it's either greater than or less than, try both
+        target: '<' // it's either greater than or less than, try both
     }
 });
 
