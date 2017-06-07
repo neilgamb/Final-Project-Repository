@@ -5,6 +5,11 @@
     <a href={{meal.recipe}}>Recipe</a>
     <p>Available Servings: {{ meal.servingCount}}</p>
     <p>Available for Pickup at: {{meal.availableTime }}</p>
+    <!-- 
+        'target' is your binding, declared on the userInfo component
+        pass in whatever the name of the user object is
+    -->
+    <user-info target="chef"></user-info>
 
     <span>How many servings do you want? </span><select ng-model="servingCount" name="servings">
         <option value="1">1</option>

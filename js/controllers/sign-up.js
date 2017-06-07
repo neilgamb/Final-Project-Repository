@@ -4,7 +4,7 @@ module.exports = {
     func: function ($scope, $state, $stateParams, UserService) {
 
         $scope.add = function(user){
-
+            
             const newUser = {
                 username: $scope.username,
                 password: $scope.password,
