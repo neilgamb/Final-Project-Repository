@@ -11,8 +11,7 @@ module.exports = {
                 return $http.post('https://thawing-waters-96173.herokuapp.com/new-user', user);
 
             },
-
-<<<<<<< HEAD
+            
             getOneUser(userID) {
                 let currentChef = {};
                 $http.get('https://thawing-waters-96173.herokuapp.com/select-user/' + userID).then(function (response) {
