@@ -9,6 +9,9 @@ module.exports = {
 
             const newMeal = {
                 name: $scope.meal_name,
+                // need something here or in meal service post request to send Keith
+                // user data
+                user_id: $scope.userID,
                 recipe: $scope.recipe_url,
                 servingCount: parseInt($scope.servings, 10),
                 availableTime: moment($scope.pickup_time.toISOString()),
