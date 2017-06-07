@@ -1,0 +1,67 @@
+.signup {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(12);
+        text-align: center;
+        color: white;
+        font-size: 5rem;
+        margin-top: 20%;
+        margin-bottom: 5%;
+    }
+
+    p {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        font-size: 2rem;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        margin-left: 120px;
+        color: white;
+
+    }
+
+    input {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border: none;
+        opacity: .6;
+        padding: 20px;
+        font-size: 3.2em;
+        border-radius: 70px;
+        color: white;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome */
+        color: white;
+    }
+
+    input, select, textarea{
+        padding-left: 50px;
+        background-color: #6C888D;
+    }
+
+    button {
+        @include grid-column(8);
+        @include grid-column-offset(2);
+        display: block;  
+        margin-bottom: 30px;
+        text-decoration: none;
+        background-color: #FFCB47;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        border-radius: 70px;
+        font-size: 4em;
+        margin-top: 50px;
+    }
+
+    h2 {
+        @include grid-column(12);
+        margin-top: 60px;
+        text-align: center;
+        color: red;
+        font-size: 3rem;
+    }
+}
