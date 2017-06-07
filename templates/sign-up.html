@@ -1,16 +1,20 @@
 <section class="signup">
 
-    <h1>Sign Up for an Account</h1>
+    <h1>SIGN UP</h1>
 
-    <p>Username: <input type="text" ng-model="username" placeholder="Enter Your Email Address"></p>
+    <p>USERNAME / EMAIL</p>
+    <input type="text" ng-model="username" placeholder="username@email.com">
 
-    <p>Password: <input type="text" ng-model="password" placeholder="Enter Password"></p>
+    <p>PASSWORD</p>
+    <input type="text" ng-model="password" placeholder="**********">
 
-    <p>Confirm Password: <input type="text" ng-model="passwordConfirm" placeholder="Re-Enter Password"></p>
+    <p>CONFIRM PASSWORD</p>
+    <input type="text" ng-model="passwordConfirm" placeholder="**********">
 
-    <p>Contact Phone Number: <input type="text" ng-model="phone" placeholder="Ex: 555-555-5555"></p>
+    <p>PHONE</p>
+    <input type="text" ng-model="phone" placeholder="Phone (XXX-XXX-XXXX)"></p>
 
-    <button ng-disabled="password !== passwordConfirm" ng-click="add()">Submit</button>
+    <button ng-disabled="password !== passwordConfirm" ng-click="add()">CONFIRM</button>
 
     <h2 ng-show="invalid == true">INVALID USERNAME!</h2>
 
