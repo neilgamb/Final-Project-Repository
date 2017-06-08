@@ -9,7 +9,6 @@ const controllers = [
     require('./controllers/cook-confirm'),
     require('./controllers/eat-confirm'),
     require('./controllers/sign-up'),
-    require('./controllers/user-info'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -126,7 +125,7 @@ app.component('signupSuccessPage', {
 
 app.component('userInfo', {
     templateUrl: 'templates/user-info.html',
-    // controller: 'UserInfoController',
+    controller: 'MealDetailController',
     bindings: {
         target: '<' // it's either greater than or less than, try both
     }
