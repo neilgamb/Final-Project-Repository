@@ -1,0 +1,19 @@
+.signupsuccess {
+    @include grid-row();
+
+    div {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+        margin-top: 15%;
+
+        p {
+            font-size: 3rem;
+
+
+        }
+    }
+
+}
