@@ -5,8 +5,6 @@ module.exports = {
   name: 'MealDetailController',
   func: function ($scope, $stateParams, MealService, UserService) {
 
-    $scope.chef = UserService.makeFakeUser();
-
     MealService.getMealAddress($stateParams.mealID).then(function (meal) {
 
       let addressMap = meal.street + " " + meal.city + " " + meal.state + " " + meal.zipcode;
@@ -33,8 +31,6 @@ module.exports = {
             eta: $scope.eta,
             id: $stateParams.mealID,
           };
-
-          MealService.postOrder(newOrder);
 
         };
       };

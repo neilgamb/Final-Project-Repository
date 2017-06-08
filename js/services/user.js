@@ -30,12 +30,6 @@ module.exports = {
                 });
             },
 
-            makeFakeUser() {
-                return {
-                    username: 'FakeUser',
-                    phone: '704-123-4567',
-                }   
-            },
         };
     },
 };
