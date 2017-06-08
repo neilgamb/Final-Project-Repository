@@ -29,6 +29,12 @@ module.exports = {
                     },
                 });
             },
+
+            makeFakeUser() {
+                return {
+                    
+                }
+            }
         };
     },
 };
