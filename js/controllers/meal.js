@@ -4,8 +4,9 @@ moment().format();
 
 module.exports = {
   name: 'MealDetailController',
-  func: function ($scope, $stateParams, MealService) {
+  func: function ($scope, $stateParams, MealService, UserService) {
 
+    $scope.chef = UserService.makeFakeUser();
 
     MealService.getMealAddress($stateParams.mealID).then(function (meal) {
 
@@ -35,6 +36,8 @@ module.exports = {
           };
 
           MealService.postOrder(newOrder);
+
+
 
         };
       };
