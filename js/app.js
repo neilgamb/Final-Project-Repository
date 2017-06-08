@@ -125,7 +125,6 @@ app.component('signupSuccessPage', {
 
 app.component('userInfo', {
     templateUrl: 'templates/user-info.html',
-    controller: 'MealDetailController',
     bindings: {
         target: '<' // it's either greater than or less than, try both
     }
