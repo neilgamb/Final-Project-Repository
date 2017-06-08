@@ -21,18 +21,9 @@ module.exports = {
           eta: moment($scope.eta.toISOString()),
           id: $stateParams.mealID,
           servingAmt: $scope.servingAmt
-        };
-
-        $scope.meal = MealService.getOneMeal($stateParams.mealID);
-
-        $scope.addOrder = function (order) {
-
-          const newOrder = {
-            eta: $scope.eta,
-            id: $stateParams.mealID,
-          };
 
         };
+
       };
     });
   }
