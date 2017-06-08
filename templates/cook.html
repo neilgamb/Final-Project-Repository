@@ -1,59 +1,63 @@
 <section class="cook">
 
     <div class="logo">
-    <img src="noun_782403_cc WHITE.png">
+        <img src="noun_782403_cc WHITE.png">
     </div>
+
+    <div class="newMeal">
 
         <input type='text' ng-model="meal_name" placeholder="Enter Meal Name"><br>
 
-        <select ng-model="category" name="category">
-            <option value="">Select Cuisine</option>
-            <option value="american">American</option>
-            <option value="asian">Asian</option>
-            <option value="bbq">Barbeque</option>
-            <option value="breakfast">Breakfast</option>
-            <option value="cajun-creole">Cajun / Creole</option>
-            <option value="caribbean">Caribbean</option>
-            <option value="french">French</option>
-            <option value="indian">Indian</option>
-            <option value="italian">Italian</option>
-            <option value="mediterranean">Mediterranean</option>
-            <option value="mexican">Mexican</option>
-            <option value="mideast">Middle Eastern</option>
-            <option value="seafood">Seafood</option>
-            <option value="soul">Soul</option>
-            <option value="spanish">Spanish</option>
-            <option value="veg">Vegetarian</option>
-            <option value="other">Other</option>
-        </select> <br>
+            <select ng-model="category" name="category">
+                <option value="">Select Cuisine</option>
+                <option value="american">American</option>
+                <option value="asian">Asian</option>
+                <option value="bbq">Barbeque</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="cajun-creole">Cajun / Creole</option>
+                <option value="caribbean">Caribbean</option>
+                <option value="french">French</option>
+                <option value="indian">Indian</option>
+                <option value="italian">Italian</option>
+                <option value="mediterranean">Mediterranean</option>
+                <option value="mexican">Mexican</option>
+                <option value="mideast">Middle Eastern</option>
+                <option value="seafood">Seafood</option>
+                <option value="soul">Soul</option>
+                <option value="spanish">Spanish</option>
+                <option value="veg">Vegetarian</option>
+                <option value="other">Other</option>
+            </select> <br>
 
-        <input type='text' id="recipe_url" ng-model="recipe_url" placeholder="Enter Reciple URL"><br>
+            <input type='text' id="recipe_url" ng-model="recipe_url" placeholder="Enter Reciple URL"><br>
 
-        <select ng-model="servings" name="servings">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select> <span> servings</span><br>
+            <select ng-model="servings" name="servings">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select> <span> servings</span><br>
 
-        <input type="time" ng-model="pickup_time" data-format="h:mm"> <br> <!-- look into http://vitalets.github.io/combodate/# -->
+            <input type="time" ng-model="pickup_time" data-format="h:mm"> <br> <!-- look into http://vitalets.github.io/combodate/# -->
 
-        <p>Pickup Location:</p>
-        <input type="text" ng-model="street" placeholder="Street"><br>
-        <input type="text" ng-model="city" placeholder="City"><br>
-        <input type="text" ng-model="state" placeholder="State"><br>
-        <input type="text" ng-model="zipcode" placeholder="Zip Code"><br>
+            <p>Pickup Location:</p>
+            <input type="text" ng-model="street" placeholder="Street"><br>
+            <input type="text" ng-model="city" placeholder="City"><br>
+            <input type="text" ng-model="state" placeholder="State"><br>
+            <input type="text" ng-model="zipcode" placeholder="Zip Code"><br>
 
 
-        <input type='text' ng-model="add_info" placeholder="Additional Comments"><br>
+            <input type='text' ng-model="add_info" placeholder="Additional Comments"><br>
+
+    </div>
 
         <a ui-sref="cookconfirm"><button ng-click='add()'>Start Cooking!</button></a>
 
