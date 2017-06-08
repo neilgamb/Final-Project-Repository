@@ -1,7 +1,6 @@
 var moment = require('moment');
 moment().format();
 
-
 module.exports = {
   name: 'MealDetailController',
   func: function ($scope, $stateParams, MealService, UserService) {
@@ -36,8 +35,6 @@ module.exports = {
           };
 
           MealService.postOrder(newOrder);
-
-
 
         };
       };
