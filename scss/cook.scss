@@ -13,4 +13,10 @@
             
         }
     }
+
+    div.newMeal {
+        @include grid-column(12);
+        border: solid;
+
+    }
 }
