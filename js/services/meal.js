@@ -92,7 +92,6 @@ module.exports = {
                     return meal;
                 });
 
-                // return meal;
             },
 
             postOrder(order) {

@@ -23,7 +23,7 @@ gulp.task('css', function () {
     return gulp.src('scss/style.scss')
         .pipe(sass())
         .pipe(gulp.dest('public'));
-})
+})      
 
 gulp.task('templates', function () {
     return gulp.src('templates/*.html')
@@ -33,7 +33,7 @@ gulp.task('templates', function () {
 gulp.task('watch', function () {
     gulp.watch('*.html', ['html']);
     gulp.watch('templates/*.html', ['html']);
-    gulp.watch('*.scss', ['css']);
+    gulp.watch('scss/*.scss', ['css']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch('js/*/*.js', ['js']);
 });
