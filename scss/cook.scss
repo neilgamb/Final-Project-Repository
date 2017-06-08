@@ -1,0 +1,16 @@
+.cook {
+    @include grid-row();
+    margin: 0px;;
+
+    div.logo {
+        @include grid-column(12);
+        color: white;
+        margin-bottom: 5%;
+        text-align: center;
+
+        img {
+            width: 40%;
+            
+        }
+    }
+}

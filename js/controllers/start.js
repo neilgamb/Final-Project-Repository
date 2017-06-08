@@ -1,7 +1,7 @@
 module.exports = {
 
     name: 'StartController',
-    func: function ($scope, $stateParams, UserService) {
+    func: function ($scope, $state, $stateParams, UserService) {
 
         $scope.login = function(unpw){
 
@@ -15,8 +15,8 @@ module.exports = {
                 console.log('success');
                 $state.go('home')
 
-            }).catch(function(){
-                console.log('failure');
+            }).catch(function(error){
+                console.log(error);
             })
 
 
