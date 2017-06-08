@@ -11,7 +11,7 @@
     -->
     <user-info target="chef"></user-info>
 
-    <span>How many servings do you want? </span><select ng-model="servingCount" name="servings">
+    <span>How many servings do you want? </span><select ng-model="servingAmt" name="servings">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -26,7 +26,7 @@
         <option value="12">12</option>
     </select><br><br>
 
-    <span>What is your ETA? </span><input type="text" ng-model="eta" data-format="h:mm" placeholder="Enter ETA"><br><br>
+    <span>What is your ETA? </span><input type="time" ng-model="eta" data-format="h:mm"><br><br>
 
     <a ui-sref="eatconfirm"><button ng-click='addOrder()'>Place Order</button></a>
 

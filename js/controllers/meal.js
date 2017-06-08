@@ -1,3 +1,7 @@
+var moment = require('moment');
+moment().format();
+
+
 module.exports = {
     name: 'MealDetailController',
     func: function ($scope, $stateParams, MealService) {
@@ -16,8 +20,10 @@ module.exports = {
         $scope.addOrder = function (order) {
 
             const newOrder = {
-                eta: $scope.eta,
-                id: $stateParams.mealID
+
+                eta: moment($scope.eta.toISOString()),
+                id: $stateParams.mealID,
+                servingAmt: $scope.servingAmt
             };
 
             MealService.postOrder(newOrder);

@@ -1,0 +1,26 @@
+.home {
+    @include grid-row();
+
+    .buttons {
+        @include grid-column(10);
+        @include  grid-column-offset(1);
+        text-align: center;
+        margin-top: 25%;
+
+        a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            background-color: #FFCB47;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 70px;
+            font-size: 4em;
+            margin-top: 60px;
+        }
+
+    }
+    
+}
+
