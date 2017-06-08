@@ -68,6 +68,7 @@ module.exports = {
                     meal.state = response.data.state;
                     meal.zipcode = response.data.zipcode;
                     meal.add_info = response.data.add_info;
+                    meal.user = response.data.user;
                 });
 
                 return meal;
