@@ -38,7 +38,6 @@ module.exports = {
 
         };
       },
-});
 
     function initMap(addressMap) {
 
