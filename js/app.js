@@ -1,4 +1,4 @@
-const app = angular.module('MealApp', ['ui.router']);
+const app = angular.module('MealApp', ['ui.router', 'star-rating']);
 
 const controllers = [
     require('./controllers/home'),
