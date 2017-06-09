@@ -18,11 +18,13 @@ module.exports = {
 
         const newOrder = {
 
-          eta: moment($scope.eta.toISOString()),
+          eta: $scope.eta,
           id: $stateParams.mealID,
           servingAmt: $scope.servingAmt
 
         };
+
+         MealService.postOrder(newOrder);
 
       };
     });
