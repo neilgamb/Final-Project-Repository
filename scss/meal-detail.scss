@@ -1,0 +1,112 @@
+.mealDetail {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(12);
+        color: white;
+        font-size: 4.5rem;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .subtitle {
+        @include grid-column(12);
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 40px;
+
+        h3, .recipe {
+            display: inline;
+            font-weight: 100;
+        }
+
+        .recipe {
+            color: #4A5043;
+        }
+    }
+
+    .left, .right {
+        @include grid-column(7);
+        @include grid-column-offset(1);
+        padding: 20px;
+        font-size: 2.5rem;
+        background-color: #FFCB47;
+        color: white;
+
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .right {
+        @include grid-column(3);
+        @include grid-column-offset(0);
+        border-left: none;
+        background-color: white;
+        text-align: center;
+        color: black;
+    }
+
+    #topleft {
+        border-top-left-radius: 20px;
+    }
+
+    #bottomleft {
+        border-bottom-left-radius: 20px;
+        border-top: solid;
+    }
+
+    #topright {
+        border-top-right-radius: 20px;
+    }
+
+    #bottomright {
+        border-bottom-right-radius: 20px;
+        border-top: solid;
+        border-top-color: lightgray;
+    }
+
+    user-info {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border: solid;
+        border-width: 1px;
+        margin-top: 40px;
+
+        h1, h3, p {
+            @include grid-column(12);
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+
+    #map {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border: solid;
+        border-width: 1px;
+        margin-top: 20px;
+        border-radius: 30px;
+    }
+
+    .input {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border: solid;
+        border-width: 1px;
+        margin-top: 20px;
+    }
+
+    button {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        border: solid;
+        border-width: 1px;
+        margin-top: 20px;
+    }
+}   
+

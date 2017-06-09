@@ -1,0 +1,37 @@
+header {
+    @include grid-row();
+
+    .mealheader, .cuisineheader {
+        @include grid-column(4);
+    }
+
+    .servingsheader, .arrowheader {
+        @include grid-column(2);
+    }
+
+}
+
+main {
+    @include grid-row();
+
+    ul {
+        padding: 0px;
+
+        li {
+            list-style: none;
+
+            .box {
+
+                .meal, .cuisine {
+                    @include grid-column(4);
+                }
+
+                .servings, .arrow {
+                    @include grid-column(2);
+                }
+            }
+        }
+    }
+}
+
+
