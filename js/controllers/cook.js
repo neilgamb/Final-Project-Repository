@@ -12,7 +12,7 @@ module.exports = {
                 user_id: $scope.userID,
                 recipe: $scope.recipe_url,
                 servingCount: parseInt($scope.servings, 10),
-                availableTime: moment($scope.pickup_time.toISOString()),
+                availableTime: $scope.pickup_time,
                 category: $scope.category,
                 add_info: $scope.add_info,
                 street: $scope.street,

@@ -21,7 +21,10 @@ module.exports = {
           eta: moment($scope.eta.toISOString()),
           id: $stateParams.mealID,
           servingAmt: $scope.servingAmt
+
         };
+
+
       };
     });
   },

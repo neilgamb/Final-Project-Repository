@@ -1,15 +1,26 @@
-
 <section class="results">
 
-<h1>Meal List</h1>
+<header>
+    <h2 class="mealheader">MEAL</h2>
+    <h2 class="cuisineheader">CUISINE</h2>
+    <h2 class="servingsheader">#</h2>
+    <h2 class="arrowheader">></h2>
+</header>
 
+<main>
    <ul>
         <li class="mealitems" ng-repeat="meal in availableMeals">
-            <h3><a ui-sref="mealdetail({mealID:meal.id})">{{meal.name}}</a></h3>
-            <!--<h3>{{ meal.name }}</h3> -->
-            <p>{{ meal.servingCount}}</p>
-            <p>{{ meal.category }}</p>
+            <a ui-sref="mealdetail({mealID:meal.id})">
+                <div class="box">
+                    <h2 class="meal">{{ meal.name }}</h2>
+                    <h2 class="cuisine">{{ meal.category }}</h2>
+                    <h2 class="servings">{{ meal.servingCount}}</h2>   
+                    <h2 class="arrow">></h2>
+                </div>
+            </a>
         </li>
     </ul>
+
+</main>
 
 </section>
