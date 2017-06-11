@@ -109,6 +109,34 @@ module.exports = {
                 return lastOrder;
 
             },
+
+            getCookedMeals(){
+
+                const cookedMeals = [];
+
+                $http.get('https://thawing-waters-96173.herokuapp.com/meals-pending-cook').then(function (response){
+
+                    for (let i = 0; i < response.data.length; i++){
+                        cookedMeals.push(response.data[i]);
+                    };
+                });
+
+                return cookedMeals;
+            },
+
+            getOrderedMeals(){
+
+                const orderedMeals = [];
+
+                $http.get('https://thawing-waters-96173.herokuapp.com/meals-pending-eat').then(function (response){
+
+                    for (let i = 0; i < response.data.length; i++){
+                        orderedMeals.push(response.data[i]);
+                    };
+                });
+
+                return orderedMeals;
+            }
         }
     }
 }

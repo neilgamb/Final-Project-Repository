@@ -21,6 +21,10 @@
         }
 
     }
+
+    .status {
+        @include grid-column(12);
+    }
     
 }
 

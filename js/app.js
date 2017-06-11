@@ -9,6 +9,8 @@ const controllers = [
     require('./controllers/cook-confirm'),
     require('./controllers/eat-confirm'),
     require('./controllers/sign-up'),
+    require('./controllers/status-cook'),
+    require('./controllers/status-order')
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -72,11 +74,11 @@ app.config(function ($stateProvider, $httpProvider) {
         url: '/sign-up-success',
         component: 'signupSuccessPage',
     });
-    $stateProvider.state({
-        name: 'userinfo',
-        url: '/user/:userID',
-        component: 'userInfo',
-    });
+    // $stateProvider.state({
+    //     name: 'userinfo',
+    //     url: '/user/:userID',
+    //     component: 'userInfo',
+    // });
 });
 
 app.component('startPage', {
@@ -130,4 +132,13 @@ app.component('userInfo', {
     }
 });
 
+app.component('statusCook', {
+    templateUrl: 'templates/status-cook.html',
+    controller: 'CookStatusController',
+});
+
+app.component('statusOrder', {
+    templateUrl: 'templates/status-order.html',
+    controller: 'OrderStatusController',
+});
 
