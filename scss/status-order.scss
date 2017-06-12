@@ -1,18 +1,29 @@
 .statusOrder {
 
-    @include grid-column(6);
+    @include grid-column(12);
+    // border: solid;
+    // border-width: 2px;
+    // padding: 0px;
+    // margin: 2px;
+    // color: black;
 
-    ul {
-        background-color: white;
+    // .name {
+    //     color: blue;
+    // }
 
-        li {
-            list-style: none;
-            padding: 0px;
+    // ul {
+    //     background-color: white;
 
-            h2 {
-                color: black;
-            }
-        }
-    }
+    //     li {
+    //         margin-top: 15px;
+    //         list-style: none;
+    //         padding: 0px;
+    //         color: black;
+
+    //         h2 {
+    //             color: black;
+    //         }
+    //     }
+    // }
 
 }

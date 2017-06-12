@@ -5,7 +5,8 @@
         @include grid-column(10);
         @include  grid-column-offset(1);
         text-align: center;
-        margin-top: 25%;
+        margin-top: 5%;
+        margin-bottom: 15%;
 
         a {
             display: block;
@@ -23,7 +24,14 @@
     }
 
     .status {
-        @include grid-column(12);
+
+        h2 {
+            @include grid-column(12);
+            color: white;
+            margin: 0px;
+            margin-left: 20px;
+            font-size: 3rem;
+        }
     }
     
 }

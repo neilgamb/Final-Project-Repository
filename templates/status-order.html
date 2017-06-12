@@ -3,8 +3,8 @@
    <ul>
         <li class="ordereditems" ng-repeat="meal in orderedMeals">
             <h2 class="meal">{{ meal.name }}</h2>
-            <!--<h2 class="cuisine">{{ meal.category }}</h2>-->
-            <!--<h2 class="servings">{{ meal.servingCount}}</h2>   -->
+            <p>{{ meal.user.username }}</p>
+            <star-rating-comp rating="$ctrl.target.rating"></star-rating-comp>
         </li>
     </ul>
 

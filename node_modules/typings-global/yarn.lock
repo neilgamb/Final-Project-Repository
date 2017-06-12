@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@types/node@*", "@types/node@^7.0.29":
+  version "7.0.29"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.29.tgz#ccfcec5b7135c7caf6c4ffb8c7f33102340d99df"
+
+"@types/shelljs@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@types/shelljs/-/shelljs-0.6.0.tgz#090b705c102ce7fc5c0c5ea9b524418ff15840df"
+  dependencies:
+    "@types/node" "*"
+
+"@types/which@^1.0.28":
+  version "1.0.28"
+  resolved "https://registry.yarnpkg.com/@types/which/-/which-1.0.28.tgz#016e387629b8817bed653fe32eab5d11279c8df6"
+
 balanced-match@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
@@ -47,6 +61,10 @@ interpret@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.3.tgz#cbc35c62eeee73f19ab7b10a801511401afc0f90"
 
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+
 minimatch@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
@@ -83,7 +101,7 @@ semver@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
-shelljs@^0.7.7:
+shelljs@^0.7.6, shelljs@^0.7.7:
   version "0.7.7"
   resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.7.7.tgz#b2f5c77ef97148f4b4f6e22682e10bba8667cff1"
   dependencies:
@@ -91,9 +109,43 @@ shelljs@^0.7.7:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
+smartq@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/smartq/-/smartq-1.1.1.tgz#efb358705260d41ae18aef7ffd815f7b6fe17dd3"
+  dependencies:
+    typed-promisify "^0.3.0"
+    typings-global "^1.0.14"
+
+smartshell@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/smartshell/-/smartshell-1.0.6.tgz#27b1c79029784abe72ac7e91fe698b7ebecc6629"
+  dependencies:
+    "@types/shelljs" "^0.6.0"
+    "@types/which" "^1.0.28"
+    shelljs "^0.7.6"
+    smartq "^1.1.0"
+    which "^1.2.12"
+
+typed-promisify@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/typed-promisify/-/typed-promisify-0.3.0.tgz#1ba0af5e444c87d8047406f18ce49092a1191853"
+
 typescript@next:
   version "2.3.0-dev.20170422"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.0-dev.20170422.tgz#d510155a0672d13bff6a327edce13f0697ba3858"
+
+typings-global@^1.0.14:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/typings-global/-/typings-global-1.0.16.tgz#489b71781af24268750c2899316400a5e482961f"
+  dependencies:
+    semver "^5.3.0"
+    shelljs "^0.7.7"
+
+which@^1.2.12:
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/which/-/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
+  dependencies:
+    isexe "^2.0.0"
 
 wrappy@1:
   version "1.0.2"

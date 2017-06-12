@@ -114,11 +114,13 @@ module.exports = {
 
                 const cookedMeals = [];
 
-                $http.get('https://thawing-waters-96173.herokuapp.com/meals-pending-cook').then(function (response){
+                $http.get('https://thawing-waters-96173.herokuapp.com/people-pickup').then(function (response) {
 
-                    for (let i = 0; i < response.data.length; i++){
+                    for (let i = 0; i < response.data.length; i++) {
+                        console.log(response.data);
                         cookedMeals.push(response.data[i]);
                     };
+
                 });
 
                 return cookedMeals;

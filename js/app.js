@@ -1,7 +1,6 @@
 const app = angular.module('MealApp', ['ui.router', 'star-rating']);
 
 const controllers = [
-    require('./controllers/home'),
     require('./controllers/cook'),
     require('./controllers/start'),
     require('./controllers/meal-list'),
@@ -75,11 +74,6 @@ app.config(function ($stateProvider, $httpProvider) {
         url: '/sign-up-success',
         component: 'signupSuccessPage',
     });
-    // $stateProvider.state({
-    //     name: 'userinfo',
-    //     url: '/user/:userID',
-    //     component: 'userInfo',
-    // });
 });
 
 app.component('startPage', {
@@ -89,7 +83,6 @@ app.component('startPage', {
 
 app.component('homePage', {
     templateUrl: 'templates/home.html',
-    controller: 'HomeController', // not sure what controller to use here
 });
 
 app.component('cookPage', {
