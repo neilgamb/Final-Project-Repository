@@ -117,13 +117,13 @@ module.exports = {
                 $http.get('https://thawing-waters-96173.herokuapp.com/people-pickup').then(function (response) {
 
                     for (let i = 0; i < response.data.length; i++) {
-                        console.log(response.data);
+                        response.data[i].eta = moment(response.data[i].eta).format('LT');
                         cookedMeals.push(response.data[i]);
                     };
 
                 });
-
-                return cookedMeals;
+                
+                return cookedMeals; 
             },
 
             getOrderedMeals(){

@@ -9,7 +9,7 @@
         li {
             list-style: none;
             background-color: white;
-            opacity: .7;
+            opacity: .6;
             border-radius: 10px;
             color: #364141;
             border: solid;
@@ -19,12 +19,22 @@
             margin: 15px;
             padding: 10px;
 
-            p {
-                display: inline;
-            }
-        
-        }
+            .description {
+                width: 80%;
 
+                p {
+                    display: inline;
+                }
+            }
+
+            .check {
+                width: 20%;
+            }
+        }
+    }
+
+    .eater, .meal, .time {
+        font-weight: bolder;
     }
 
 }

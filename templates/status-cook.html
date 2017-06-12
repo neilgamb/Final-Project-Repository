@@ -2,9 +2,15 @@
 
    <ul>
         <li ng-repeat="person in people">
-            <p>{{ person.meal.name }} </p>
-            <p>for {{ person.userEater.username }}, </p>
-            <p>to be picked up around {{ person.eta }}</p>
+            <div class="description">
+                <p><span class="eater">{{ person.userEater.username }}</span> is picking up your </p>
+                <p><span class="eater">{{ person.meal.name }}</span> </p>
+                <p>around <span class="eater">{{ person.eta }}</span></p>
+            </div>
+
+            <div class="check">
+                
+            </div>
         </li>
     </ul>
 
