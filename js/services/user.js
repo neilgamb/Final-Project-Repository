@@ -30,8 +30,8 @@ module.exports = {
                 });
             },
 
-            attemptLogout(user){
-                return $http.get('https://thawing-waters-96173.herokuapp.com/logout', user);
+            attemptLogout(){
+                return $http.get('https://thawing-waters-96173.herokuapp.com/logout');
             },
         };
     },
