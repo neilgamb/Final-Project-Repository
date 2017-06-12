@@ -10,7 +10,8 @@ const controllers = [
     require('./controllers/eat-confirm'),
     require('./controllers/sign-up'),
     require('./controllers/status-cook'),
-    require('./controllers/status-order')
+    require('./controllers/status-order'),
+    require('./controllers/logout'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
