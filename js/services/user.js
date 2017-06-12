@@ -10,14 +10,6 @@ module.exports = {
 
             },
 
-            // getOneUser(userID) {
-            //     let currentChef = {};
-            //     $http.get('https://thawing-waters-96173.herokuapp.com/select-user/' + userID).then(function (response) {
-            //         console.log(response.data);
-            //         return user;
-            //     });
-            // },
-
             attemptLogin(unpw) {
                 return $http.post('https://thawing-waters-96173.herokuapp.com/login', unpw, {
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -30,6 +22,9 @@ module.exports = {
                 });
             },
 
+            attemptLogout(){
+                return $http.get('https://thawing-waters-96173.herokuapp.com/logout');
+            },
         };
     },
 };
