@@ -141,3 +141,9 @@ app.component('logOut', {
     controller: 'LogOutController',
 });
 
+app.component('tokenCounter', {
+    templateUrl: 'templates/token-counter.html',
+    // Luke says probably don't even have to use bindings. keep working on it. Write
+    // 
+});
+
