@@ -21,6 +21,10 @@ module.exports = {
                     },
                 });
             },
+          
+            attemptLogout(){
+                return $http.get('https://thawing-waters-96173.herokuapp.com/logout');
+            },
         };
     },
 };

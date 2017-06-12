@@ -10,11 +10,12 @@ const controllers = [
     require('./controllers/sign-up'),
     require('./controllers/status-cook'),
     require('./controllers/status-order'),
+    require('./controllers/logout'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
-}
+};
 
 const mealService = require('./services/meal');
 app.factory(mealService.name, mealService.func);
@@ -73,11 +74,6 @@ app.config(function ($stateProvider, $httpProvider) {
         url: '/sign-up-success',
         component: 'signupSuccessPage',
     });
-    // $stateProvider.state({
-    //     name: 'userinfo',
-    //     url: '/user/:userID',
-    //     component: 'userInfo',
-    // });
 });
 
 app.component('startPage', {
@@ -139,3 +135,9 @@ app.component('statusOrder', {
     templateUrl: 'templates/status-order.html',
     controller: 'OrderStatusController',
 });
+
+app.component('logOut', {
+    templateUrl: 'templates/logout.html',
+    controller: 'LogOutController',
+});
+
