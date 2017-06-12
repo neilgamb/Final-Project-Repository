@@ -1,7 +1,6 @@
 const app = angular.module('MealApp', ['ui.router', 'star-rating']);
 
 const controllers = [
-    require('./controllers/home'),
     require('./controllers/cook'),
     require('./controllers/start'),
     require('./controllers/meal-list'),
@@ -10,7 +9,7 @@ const controllers = [
     require('./controllers/eat-confirm'),
     require('./controllers/sign-up'),
     require('./controllers/status-cook'),
-    require('./controllers/status-order')
+    require('./controllers/status-order'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -88,7 +87,6 @@ app.component('startPage', {
 
 app.component('homePage', {
     templateUrl: 'templates/home.html',
-    controller: 'HomeController', // not sure what controller to use here
 });
 
 app.component('cookPage', {
@@ -141,4 +139,3 @@ app.component('statusOrder', {
     templateUrl: 'templates/status-order.html',
     controller: 'OrderStatusController',
 });
-

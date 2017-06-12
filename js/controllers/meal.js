@@ -18,7 +18,7 @@ module.exports = {
 
         const newOrder = {
 
-          eta: $scope.eta,
+          eta: momemt($scope.eta).format('YYYY-MM-DDTHH:mm:ss'),
           id: $stateParams.mealID,
           servingAmt: $scope.servingAmt
 
