@@ -15,7 +15,7 @@ const controllers = [
 
 for (let i = 0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
-}
+};
 
 const mealService = require('./services/meal');
 app.factory(mealService.name, mealService.func);
