@@ -144,5 +144,6 @@ app.component('statusOrder', {
 
 app.component('logOut', {
     templateUrl: 'templates/logout.html',
+    controller: 'LogOutController',
 });
 
