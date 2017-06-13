@@ -2,10 +2,16 @@
 
    <ul>
         <li class="ordereditems" ng-repeat="meal in orderedMeals">
-            <h2 class="meal">{{ meal.name }}</h2>
-            <p>{{ meal.user.username }}</p>
-            <star-rating-comp rating="$ctrl.target.rating"></star-rating-comp>
+            <div class="description">
+                <p><span class="meal">{{ meal.name }}</span> from</p>
+                <p><span class="cook">{{ meal.user.username }}</span></p>
+            </div>
+            <div class="check">
+                <button><i class="fa fa-check" aria-hidden="true"></i></button>   
+            </div>
         </li>
     </ul>
 
 </section>
+
+
