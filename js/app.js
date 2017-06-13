@@ -155,5 +155,3 @@ app.component('tokenCounter', {
     templateUrl: 'templates/token-counter.html',
     controller: 'TokenCounterController',
 });
-
-
