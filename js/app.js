@@ -12,6 +12,7 @@ const controllers = [
     require('./controllers/status-order'),
     require('./controllers/logout'),
     require('./controllers/token-counter'),
+    require('./controllers/status-cook-eaters'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -137,11 +138,20 @@ app.component('statusOrder', {
     controller: 'OrderStatusController',
 });
 
+app.component('statusCookEaters', {
+    templateUrl: 'templates/status-cook-eaters.html',
+    controller: 'CookStatusEatersController',
+    bindings: {
+        meal: '<'
+    },
+});
+
 app.component('logOut', {
     templateUrl: 'templates/logout.html',
     controller: 'LogOutController',
 });
 
+<<<<<<< HEAD
 app.component('tokenCounter', {
     templateUrl: 'templates/token-counter.html',
     controller: 'TokenCounterController',
@@ -149,4 +159,7 @@ app.component('tokenCounter', {
     // a function in the User service that returns number of tokens (Luke maybe suggested
     // a LoggedInUser service, but we'll see).
 });
+=======
+
+>>>>>>> f9b967837d22482e366af2172453dbeede79166e
 

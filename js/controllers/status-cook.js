@@ -1,8 +1,10 @@
 module.exports = {
     name: 'CookStatusController',
-    func: function ($scope, $stateParams, MealService) {
+    func: function ($scope, $state, $stateParams, MealService) {
         
-        $scope.people = MealService.getCookedMeals();
+        $scope.meals = MealService.getCookedMeals();
+
+
     
     },
 };

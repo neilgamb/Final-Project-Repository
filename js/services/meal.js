@@ -114,16 +114,37 @@ module.exports = {
 
                 const cookedMeals = [];
 
-                $http.get('https://thawing-waters-96173.herokuapp.com/people-pickup').then(function (response) {
+                $http.get('https://thawing-waters-96173.herokuapp.com/meals-pending-cook').then(function (response) {
+
 
                     for (let i = 0; i < response.data.length; i++) {
-                        response.data[i].eta = moment(response.data[i].eta).format('LT');
                         cookedMeals.push(response.data[i]);
                     };
 
                 });
+
                 
                 return cookedMeals; 
+            },
+
+            getEaters(id){
+
+                const eaters = [];
+
+                $http.get('https://thawing-waters-96173.herokuapp.com/people-pickup').then(function (response) {
+
+
+                    for (let i = 0; i < response.data.length; i++) {
+
+                        if(response.data[i].meal.id === id){
+                            response.data[i].eta = moment(response.data[i].eta).format('LT');
+                            eaters.push(response.data[i]);
+                        }
+                    };
+                });
+                
+                return eaters; 
+
             },
 
             getOrderedMeals(){
@@ -138,7 +159,13 @@ module.exports = {
                 });
 
                 return orderedMeals;
-            }
+            },
+
+            submitComplete(id) {
+
+                return $http.put('https://thawing-waters-96173.herokuapp.com/update-complete/' + id);
+
+            },
         }
     }
 }

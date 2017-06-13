@@ -1,0 +1,21 @@
+.statusCookEaters {
+
+    ul {
+        padding: 0px;
+
+        li {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            p {
+                margin: 0px;
+                font-size: 2.2rem;
+
+                .eater {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
