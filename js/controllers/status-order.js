@@ -6,3 +6,17 @@ module.exports = {
     
     },
 };
+
+
+// for later:
+
+        // $scope.completeCook = function(person) {
+
+        //     console.log(person.meal.id);
+
+        //     MealService.submitComplete(person.meal.id).then(function(){
+
+        //         $state.reload();
+
+        //     });
+        // }
