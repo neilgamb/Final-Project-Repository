@@ -2,8 +2,9 @@
 
     <h1>CHEF INFO</h1>
     <h3>{{ $ctrl.target.username }} </h1>
+    <p class="star-rating"><star-rating-comp rating="$ctrl.target.rating" read-only="true"></star-rating-comp></p>
         <p> Contact number: {{ $ctrl.target.phone }}</p>
         <p> User Rating: {{ $ctrl.target.rating }}</p>
-        <star-rating-comp rating="$ctrl.target.rating"></star-rating-comp>
+        
 
 </section>
