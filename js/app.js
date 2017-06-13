@@ -151,7 +151,6 @@ app.component('logOut', {
     controller: 'LogOutController',
 });
 
-<<<<<<< HEAD
 app.component('tokenCounter', {
     templateUrl: 'templates/token-counter.html',
     controller: 'TokenCounterController',
@@ -159,7 +158,3 @@ app.component('tokenCounter', {
     // a function in the User service that returns number of tokens (Luke maybe suggested
     // a LoggedInUser service, but we'll see).
 });
-=======
-
->>>>>>> f9b967837d22482e366af2172453dbeede79166e
-
