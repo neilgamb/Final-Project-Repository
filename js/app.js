@@ -11,6 +11,7 @@ const controllers = [
     require('./controllers/status-cook'),
     require('./controllers/status-order'),
     require('./controllers/logout'),
+    require('./controllers/token-counter'),
     require('./controllers/status-cook-eaters'),
 ];
 
@@ -150,5 +151,15 @@ app.component('logOut', {
     controller: 'LogOutController',
 });
 
+<<<<<<< HEAD
+app.component('tokenCounter', {
+    templateUrl: 'templates/token-counter.html',
+    controller: 'TokenCounterController',
+    // Luke says probably don't even have to use bindings. keep working on it. Write
+    // a function in the User service that returns number of tokens (Luke maybe suggested
+    // a LoggedInUser service, but we'll see).
+});
+=======
 
+>>>>>>> f9b967837d22482e366af2172453dbeede79166e
 
