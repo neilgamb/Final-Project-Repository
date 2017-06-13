@@ -1,0 +1,8 @@
+.cookConfirm {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(12);
+        text-align: center;
+    }
+}

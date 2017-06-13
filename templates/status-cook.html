@@ -1,16 +1,13 @@
 <section class="statusCook">
 
    <ul>
-        <li ng-repeat="person in people">
+        <li class="outer" ng-repeat="meal in meals">
             <div class="description">
-                <p><span class="servings">{{ person.eatAmt }}</span> servings of </p>
-                <p><span class="meal">{{ person.meal.name }}</span> for</p>
-                <p><span class="eater">{{ person.userEater.username }}</span></p><br>
-                <p><span class="time">eta | {{ person.eta }}</span></p>
+                <p>{{ meal.name }}</p>
             </div>
 
-            <div class="check">
-                <button ng-click><i class="fa fa-check" aria-hidden="true"></i></button>   
+            <div class="eaters">
+                <status-cook-eaters meal="meal.id"></status-cook-eaters>
             </div>
         </li>
     </ul>

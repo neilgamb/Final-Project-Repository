@@ -11,6 +11,7 @@ const controllers = [
     require('./controllers/status-cook'),
     require('./controllers/status-order'),
     require('./controllers/logout'),
+    require('./controllers/status-cook-eaters'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -136,8 +137,18 @@ app.component('statusOrder', {
     controller: 'OrderStatusController',
 });
 
+app.component('statusCookEaters', {
+    templateUrl: 'templates/status-cook-eaters.html',
+    controller: 'CookStatusEatersController',
+    bindings: {
+        meal: '<'
+    },
+});
+
 app.component('logOut', {
     templateUrl: 'templates/logout.html',
     controller: 'LogOutController',
 });
+
+
 
