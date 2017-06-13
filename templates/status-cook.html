@@ -3,13 +3,14 @@
    <ul>
         <li ng-repeat="person in people">
             <div class="description">
-                <p><span class="eater">{{ person.userEater.username }}</span> is picking up your </p>
-                <p><span class="eater">{{ person.meal.name }}</span> </p>
-                <p>around <span class="eater">{{ person.eta }}</span></p>
+                <p><span class="servings">{{ person.eatAmt }}</span> servings of </p>
+                <p><span class="meal">{{ person.meal.name }}</span> for</p>
+                <p><span class="eater">{{ person.userEater.username }}</span></p><br>
+                <p><span class="time">eta | {{ person.eta }}</span></p>
             </div>
 
             <div class="check">
-                
+                <button ng-click><i class="fa fa-check" aria-hidden="true"></i></button>   
             </div>
         </li>
     </ul>
