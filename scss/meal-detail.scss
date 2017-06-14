@@ -15,7 +15,7 @@
         text-align: center;
         color: white;
         font-size: 3rem;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
 
         h3, .recipe {
             display: inline;
@@ -30,11 +30,11 @@
     .left, .right {
         @include grid-column(7);
         @include grid-column-offset(1);
-        padding: 20px;
+        padding: 15px;
         font-size: 2.5rem;
-        background-color: #FFCB47;
-        color: white;
-
+        background-color: #52686C;
+        color: white; 
+        opacity: .6;   
         margin-bottom: 0px;
         margin-top: 0px;
     }
@@ -67,46 +67,35 @@
         border-top-color: lightgray;
     }
 
-    user-info {
-        @include grid-column(10);
-        @include grid-column-offset(1);
-        border: solid;
-        border-width: 1px;
-        margin-top: 40px;
-
-        h1, h3, p {
-            @include grid-column(12);
-            margin: 0px;
-            padding: 0px;
-            color: white;
-            text-align: center;
-            font-size: 2rem;
-        }
-    }
-
     #map {
         @include grid-column(10);
         @include grid-column-offset(1);
         border: solid;
         border-width: 1px;
-        margin-top: 20px;
-        border-radius: 30px;
+        margin-top: 30px;
+        border-radius: 20px;
     }
 
-    .input {
-        @include grid-column(10);
-        @include grid-column-offset(1);
-        border: solid;
-        border-width: 1px;
-        margin-top: 20px;
+    select {
+        border: none;
+
+        optgroup {
+            font-size: 1rem;
+        }
     }
 
     button {
         @include grid-column(10);
         @include grid-column-offset(1);
-        border: solid;
-        border-width: 1px;
-        margin-top: 20px;
+        display: block;  
+        text-decoration: none;
+        background-color: #FFCB47;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        border-radius: 70px;
+        font-size: 4em;
+        margin-top: 40px;
     }
 }   
 
