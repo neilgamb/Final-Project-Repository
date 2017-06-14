@@ -168,3 +168,7 @@ app.component('orderedMealDetailPage', {
     templateUrl: 'templates/ordered-meal-detail.html',
     controller: 'OrderedMealDetailController',
 });
+
+app.component('pageheader', {
+    templateUrl: 'templates/pageheader.html',
+})

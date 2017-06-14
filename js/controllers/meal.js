@@ -11,7 +11,6 @@ module.exports = {
 
       initMap(addressMap);
 
-
       $scope.meal = MealService.getOneMeal($stateParams.mealID);
 
       $scope.addOrder = function (order) {

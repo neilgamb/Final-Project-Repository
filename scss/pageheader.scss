@@ -1,0 +1,18 @@
+.pageheader {
+    @include grid-row();
+    background-color: #8BA4A4;
+    margin: 0px;
+    padding: 0px;
+
+    h1 {
+        @include grid-column(8);
+        @include grid-column-offset(2);
+        text-align: center;
+        font-size: 5rem;
+        font-family: 'Handlee', cursive;
+        color: white;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+    }
+}

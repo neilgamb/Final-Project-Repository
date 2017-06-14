@@ -11,9 +11,18 @@ module.exports = {
 
       $scope.meal = MealService.getOneMeal($stateParams.mealID);
 
+      $scope.stars = null;
+
+      $scope.rating = function($event){
+        $scope.stars = $event.rating;
+      }
+
       $scope.submitRating = function () {
 
-        UserService.rateUser($scope.rating, $scope.meal.user.id);
+        console.log($scope.stars);
+        console.log($scope.meal.user.id);
+
+        UserService.rateUser($scope.stars, $scope.meal.user.id);
 
       };
 

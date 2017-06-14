@@ -7,16 +7,12 @@ module.exports = {
         $scope.toOrderedMealDetail = function (id) {
 
             $state.go('orderedmealdetail', {
+                
                 mealID: id.mealID,
+
             });
 
         };
-
-        $scope.submitRating = function(){
-
-            console.log($scope.rating);
-        }
-
     },
 };
 

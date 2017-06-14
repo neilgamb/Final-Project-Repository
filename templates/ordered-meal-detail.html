@@ -35,15 +35,8 @@
 
     <div class="contents">
         <p>How would you rate your meal?</p>
-        <select ng-model="rating" name="rating">
-            <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <p>Stars</p>
+
+        <star-rating-comp size="'large'" on-click="rating($event)" name="rating"></star-rating-comp>
 
     </div>
 
@@ -51,7 +44,5 @@
 
 <a ui-sref="home"><button ng-click='submitRating(); completeOrder(meal.id)'>COMPLETE ORDER</button></a>
 
-
 </section>
 
-<!--ng-click='completeOrder(meal.id); submitRating()'-->
