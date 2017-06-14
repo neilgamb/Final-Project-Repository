@@ -1,21 +1,26 @@
 module.exports = {
     name: 'OrderStatusController',
     func: function ($scope, $state, $stateParams, MealService) {
-        
+
         $scope.orderedMeals = MealService.getOrderedMeals();
 
-        $scope.completeOrder = function(meal) {
+        // FOR LATER $scope.completeOrder = function(meal) {
 
-            console.log(meal.id);
+        //     MealService.submitComplete(meal.id).then(function(){
 
-            MealService.submitComplete(meal.id).then(function(){
+        //         $state.reload();
 
-                $state.reload();
+        //     });
+        // };
 
+        $scope.toOrderedMealDetail = function (id) {
+
+            $state.go('orderedmealdetail', {
+                mealID: id.mealID,
             });
-        }
-        
-    
+
+        };
+
     },
 };
 

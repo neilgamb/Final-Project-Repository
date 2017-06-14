@@ -7,7 +7,7 @@
                 <p><span class="cook">{{ meal.user.username }}</span></p>
             </div>
             <div class="check">
-                <button ng-click="completeOrder(meal)"><i class="fa fa-check" aria-hidden="true"></i></button>   
+                <button ng-click="toOrderedMealDetail({mealID: meal.id})"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>   
             </div>
         </li>
     </ul>

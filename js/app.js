@@ -13,6 +13,7 @@ const controllers = [
     require('./controllers/logout'),
     require('./controllers/token-counter'),
     require('./controllers/status-cook-eaters'),
+    require('./controllers/ordered-meal-detail'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -75,6 +76,11 @@ app.config(function ($stateProvider, $httpProvider) {
         name: 'signupsuccess',
         url: '/sign-up-success',
         component: 'signupSuccessPage',
+    });
+    $stateProvider.state({
+        name: 'orderedmealdetail',
+        url: '/ordered-meal/:mealID',
+        component: 'orderedMealDetailPage',
     });
 });
 
@@ -157,4 +163,9 @@ app.component('tokenCounter', {
     // Luke says probably don't even have to use bindings. keep working on it. Write
     // a function in the User service that returns number of tokens (Luke maybe suggested
     // a LoggedInUser service, but we'll see).
+});
+
+app.component('orderedMealDetailPage', {
+    templateUrl: 'templates/ordered-meal-detail.html',
+    controller: 'OrderedMealDetailController',
 });

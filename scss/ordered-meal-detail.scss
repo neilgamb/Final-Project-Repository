@@ -1,0 +1,129 @@
+.orderedMealDetail {
+    @include grid-row();
+
+    h1 {
+        @include grid-column(12);
+        color: white;
+        font-size: 4.5rem;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .subtitle {
+        @include grid-column(12);
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 30px;
+
+        h3, .recipe {
+            display: inline;
+            font-weight: 100;
+        }
+
+        .recipe {
+            color: #4A5043;
+        }
+    }
+
+    .left, .right {
+        @include grid-column(7);
+        @include grid-column-offset(1);
+        padding: 15px;
+        font-size: 2.5rem;
+        background-color: #52686C;
+        color: white; 
+        opacity: .6;   
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .right {
+        @include grid-column(3);
+        @include grid-column-offset(0);
+        border-left: none;
+        background-color: white;
+        text-align: center;
+        color: black;
+    }
+
+    #topleft {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    #topright {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    #map {
+    @include grid-column(10);
+    @include grid-column-offset(1);
+    margin-top: 30px;
+    border-radius: 20px;
+    height: 550px;
+    }
+
+    .address {
+        @include grid-row();
+        padding: 0px;
+        margin-top: 40px;
+        opacity: .6;
+
+        & > * {
+            @include grid-column(10);
+            @include grid-column-offset(1);
+
+            float: left !important;
+        }
+
+        h2 {
+                
+            background-color: #52686C;
+            margin-bottom: 0px;
+            color: white;
+            text-align: left;
+            font-size: 2.5rem;
+            font-weight: 400;
+            border-radius: 0px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .contents {
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            h3 {
+                font-size: 2.5rem;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                display: inline-block;
+                font-weight: 400;
+            }
+
+            .location {
+                width: 100%;
+                text-align: center;
+
+                p {
+                    display: inline-block;
+                    font-size: 2rem;
+                    margin: 0px;
+                    vertical-align: middle;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    user-info {
+        h2 {
+            margin-top: 0px;
+        }
+    }
+}

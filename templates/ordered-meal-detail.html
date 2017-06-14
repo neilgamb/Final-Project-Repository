@@ -1,0 +1,32 @@
+<section class="orderedMealDetail">
+
+    <h1>{{ meal.name }}</h1>
+
+    <div class="subtitle">
+        <h3>{{ meal.category }} | </h3>
+        <a class="recipe" href={{meal.recipe}}>Recipe</a>
+    </div>
+
+
+    <p class="left" id="topleft">Pickup Time</p>
+    <p class="right" id="topright">{{ meal.availableTime}}</p>
+
+    <div id="map"></div>
+
+    <div class="address">
+
+        <h2>Address</h2>
+
+        <div class="contents">
+            <div class="location">
+                <p>{{ meal.street }}&nbsp&nbsp|&nbsp&nbsp</p>
+                <p>{{ meal.city }}&nbsp&nbsp|&nbsp&nbsp</p>
+                <p>{{ meal.state }}&nbsp&nbsp|&nbsp&nbsp</p>
+                <p>{{ meal.zipcode }}</p>
+            </div>
+        </div>
+    </div>
+
+<user-info target="meal.user"></user-info>
+
+</section>

@@ -1,37 +1,22 @@
-var moment = require('moment');
-moment().format();
-
 module.exports = {
-  name: 'MealDetailController',
-  func: function ($scope, $stateParams, MealService, UserService) {
+    name: 'OrderedMealDetailController',
+    func: function ($scope, $state, $stateParams, MealService) {
+        
+        // console.log($stateParams.mealID);
 
-    MealService.getMealAddress($stateParams.mealID).then(function (meal) {
+        MealService.getMealAddress($stateParams.mealID).then(function (meal) {
+            
 
-      let addressMap = meal.street + " " + meal.city + " " + meal.state + " " + meal.zipcode;
+            let addressMap = meal.street + " " + meal.city + " " + meal.state + " " + meal.zipcode;
 
-      initMap(addressMap);
+            initMap(addressMap);
 
+            $scope.meal = MealService.getOneMeal($stateParams.mealID);
 
-      $scope.meal = MealService.getOneMeal($stateParams.mealID);
+        });
 
-      $scope.addOrder = function (order) {
-
-        const newOrder = {
-
-          eta: moment($scope.eta).format('YYYY-MM-DDTHH:mm:ss'),
-          id: $stateParams.mealID,
-          servingAmt: $scope.servingAmt
-
-        };
-
-        MealService.postOrder(newOrder);
-
-      };
-
-      });
-  },
-}
-
+    },
+};
 
 
 function initMap(addressMap) {
@@ -60,3 +45,9 @@ function geocodeAddress(geocoder, resultsMap, addressMap) {
     }
   });
 };
+
+
+
+
+
+
