@@ -2,9 +2,9 @@
 
    <ul>
         <li class="eaters" ng-repeat="eater in eaters">
-            <p>{{ eater.eatAmt }} servings for&nbsp</p>
-            <p><span class="eater">{{ eater.userEater.username }} </span></p>
-            <p>to be picked up by {{ eater.eta }}</p>
+            <p><span class="bold">{{ eater.eatAmt }}</span> servings for&nbsp</p>
+            <p><span class="bold">{{ eater.userEater.username }} </span></p>
+            <p>to be picked up by <span class="bold">{{ eater.eta }}</span></p>
         </li>
     </ul>
 
