@@ -1,0 +1,28 @@
+.tokencounter {
+    @include grid-row();
+    border-radius: 30px;
+    display: flex;
+
+    p.tokens {
+        flex-direction: row;
+        background-color:  #FFCB47;
+        color: white;
+        font-size: 2em;
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 75px;
+        vertical-align: middle;
+        font-weight: bolder;
+    }
+
+    p.text {
+        flex-direction: row;
+        color: white;
+        font-size: 2em;
+        line-height: 75px;
+        padding-left: 20px;
+        font-weight: bolder;
+    }
+}
