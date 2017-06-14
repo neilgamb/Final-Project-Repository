@@ -1,21 +1,31 @@
 module.exports = {
-    name: 'OrderedMealDetailController',
-    func: function ($scope, $state, $stateParams, MealService) {
-        
-        // console.log($stateParams.mealID);
+  name: 'OrderedMealDetailController',
+  func: function ($scope, $state, $stateParams, MealService, UserService) {
 
-        MealService.getMealAddress($stateParams.mealID).then(function (meal) {
-            
+    MealService.getMealAddress($stateParams.mealID).then(function (meal) {
 
-            let addressMap = meal.street + " " + meal.city + " " + meal.state + " " + meal.zipcode;
 
-            initMap(addressMap);
+      let addressMap = meal.street + " " + meal.city + " " + meal.state + " " + meal.zipcode;
 
-            $scope.meal = MealService.getOneMeal($stateParams.mealID);
+      initMap(addressMap);
 
-        });
+      $scope.meal = MealService.getOneMeal($stateParams.mealID);
 
-    },
+      $scope.submitRating = function () {
+
+        UserService.rateUser($scope.rating, $scope.meal.user.id);
+
+      };
+
+      $scope.completeOrder = function (id) {
+
+        MealService.submitComplete($stateParams.mealID);
+
+      };
+
+    });
+
+  },
 };
 
 

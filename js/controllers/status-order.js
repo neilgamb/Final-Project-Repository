@@ -4,15 +4,6 @@ module.exports = {
 
         $scope.orderedMeals = MealService.getOrderedMeals();
 
-        // FOR LATER $scope.completeOrder = function(meal) {
-
-        //     MealService.submitComplete(meal.id).then(function(){
-
-        //         $state.reload();
-
-        //     });
-        // };
-
         $scope.toOrderedMealDetail = function (id) {
 
             $state.go('orderedmealdetail', {
@@ -20,6 +11,11 @@ module.exports = {
             });
 
         };
+
+        $scope.submitRating = function(){
+
+            console.log($scope.rating);
+        }
 
     },
 };

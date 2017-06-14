@@ -33,6 +33,12 @@ module.exports = {
                     return response.data.token;
                 });
             },
+
+            rateUser(rating, userID){
+
+                return $http.put('https://thawing-waters-96173.herokuapp.com/rate-user/' + userID, rating);
+
+            }
         };
     },
 };

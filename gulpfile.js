@@ -1,5 +1,6 @@
 let gulp = require('gulp');
 let browser = require('gulp-browser');
+let babel = require('gulp-babel');
 let sass = require('gulp-sass');
 
 gulp.task('default', ['html', 'js', 'css', 'templates']);
@@ -12,6 +13,9 @@ gulp.task('html', function () {
 gulp.task('js', function () {
     return gulp.src('js/app.js')
         .pipe(browser.browserify())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(gulp.dest('public'));
 })
 

@@ -26,11 +26,13 @@ app.factory(mealService.name, mealService.func);
 const userService = require('./services/user');
 app.factory(userService.name, userService.func);
 
-app.config(function ($stateProvider, $httpProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     // Added by Luke: 'always send cookie data with ajax requests'
     // Necessary to make authenticated (logged in) requests after
     // you're logged in from localhost.
     $httpProvider.defaults.withCredentials = true;
+
+    $urlRouterProvider.otherwise('/start');
 
     $stateProvider.state({
         name: 'start',

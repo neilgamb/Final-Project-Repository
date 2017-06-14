@@ -124,6 +124,75 @@
     user-info {
         h2 {
             margin-top: 0px;
+            margin-bottom: 0px;
         }
     }
+}
+
+    .ratingSubmission {
+        opacity: .6;
+
+        & > * {
+            @include grid-column(10);
+            @include grid-column-offset(1);
+            float: left !important;
+        }
+
+        h2 {
+            background-color: #52686C;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            color: white;
+            text-align: left;
+            font-size: 2.5rem;
+            font-weight: 400;
+            border-radius: 0px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .contents {
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: inline-block;
+            // justify-content: space-between;
+
+            p {
+                // flex-direction: row;
+                display: inline-block;
+                font-size: 2rem;
+                margin: 0px;
+                vertical-align: middle;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            select {
+                // flex-direction: row;
+                display: inline-block;
+                width: 25%;
+                font-size: 2rem;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+        button {
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        display: block;  
+        text-decoration: none;
+        background-color: #FFCB47;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        border-radius: 70px;
+        font-size: 4em;
+        margin-top: 40px;
+    }
+
+    .ratingSubmission:last-child:not(:first-child) {
+    float: none;
 }
