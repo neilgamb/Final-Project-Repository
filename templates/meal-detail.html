@@ -7,19 +7,20 @@
         <a class="recipe" href={{meal.recipe}}>Recipe</a>
     </div>
 
-        <p class="left" id="topleft">Available Servings</p><p class="right" id="topright">{{ meal.servingCount}}</p><br>
-        <p class="left" id="bottomleft">Available Pickup Time</p><p class="right" id="bottomright">{{meal.availableTime }}</p>
-    <!-- 
-        'target' is your binding, declared on the userInfo component
-        pass in whatever the name of the user object is
-    -->
+    <p class="left" id="topleft">Available Servings</p>
+    <p class="right" id="topright">{{ meal.servingCount}}</p>
+    <p class="left" id="bottomleft">Available Pickup Time</p>
+    <p class="right" id="bottomright">{{meal.availableTime }}</p>
 
     <div id="map"></div>
 
     <user-info target="meal.user"></user-info>
 
-    <div class="input">
-        <span>How many servings do you want? </span><select ng-model="servingAmt" name="servings">
+    <p class="left" id="topleft">How many servings?</p>
+    <p class="right" id="topright">
+        <select ng-model="servingAmt" name="servings">
+            <optgroup>
+            <option value="">Select</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -32,11 +33,12 @@
             <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
-        </select><br><br>
-
-        <span>What is your ETA? </span><input type="time" ng-model="eta" data-format="h:mm"><br><br>
-
-    </div>
+            </optgroup>
+        </select></p>
+    <p class="left" id="bottomleft">What's your ETA?</p>
+    <p class="right" id="bottomright">
+        <input type="time" ng-model="eta" data-format="h:mm">
+    </p>
 
     <a ui-sref="eatconfirm"><button ng-click='addOrder()'>Place Order</button></a>
 
