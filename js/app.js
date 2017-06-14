@@ -13,6 +13,7 @@ const controllers = [
     require('./controllers/logout'),
     require('./controllers/token-counter'),
     require('./controllers/status-cook-eaters'),
+    require('./controllers/ordered-meal-detail'),
 ];
 
 for (let i = 0; i < controllers.length; i++) {
@@ -75,6 +76,11 @@ app.config(function ($stateProvider, $httpProvider) {
         name: 'signupsuccess',
         url: '/sign-up-success',
         component: 'signupSuccessPage',
+    });
+    $stateProvider.state({
+        name: 'orderedmealdetail',
+        url: '/ordered-meal/:mealID',
+        component: 'orderedMealDetailPage',
     });
 });
 
@@ -154,4 +160,9 @@ app.component('logOut', {
 app.component('tokenCounter', {
     templateUrl: 'templates/token-counter.html',
     controller: 'TokenCounterController',
+});
+
+app.component('orderedMealDetailPage', {
+    templateUrl: 'templates/ordered-meal-detail.html',
+    controller: 'OrderedMealDetailController',
 });

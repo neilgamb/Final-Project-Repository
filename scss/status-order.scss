@@ -1,32 +1,28 @@
 .statusOrder {
-
     @include grid-column(12);
     padding: 0px;
-    
+
     ul {
         padding: 0px;
-        
+
         li {
+            margin-top: 20px;
+            margin-left: 20px;
             list-style: none;
             background-color: white;
-            opacity: .6;
-            border-radius: 10px;
-            color: #364141;
-            border: solid;
-            border-width: 2px;
-            border-color: white;
+            opacity: .7;
+            border-radius: 20px;
+            color: #52686C;
             font-size: 2.5rem;
-            margin: 15px;
             display: flex;
             justify-content: space-between;
 
             .description {
                 flex-direction: row;
-                padding-right: 10px;
-                padding: 10px;
+                padding-left: 20px;
 
                 p {
-                    display: inline;
+                    display: inline-block;
                 }
             }
 
@@ -34,6 +30,8 @@
                 flex-direction: row;
                 width: 20%;
                 background-color: #FFCB47;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
 
                 button {
                     margin: 0 auto;
@@ -55,8 +53,5 @@
         }
     }
 
-    .cook, .meal {
-        font-weight: bolder;
-    }
 
 }

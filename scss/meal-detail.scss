@@ -70,10 +70,9 @@
     #map {
         @include grid-column(10);
         @include grid-column-offset(1);
-        border: solid;
-        border-width: 1px;
         margin-top: 30px;
         border-radius: 20px;
+        height: 550px;
     }
 
     select {
