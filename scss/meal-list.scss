@@ -2,13 +2,17 @@ header {
     @include grid-row();
     background-color: #8BA4A4;
     color: white;
-    font-size: 2rem;
+    font-size: .8rem;
     position: fixed;
     top: 0px;
     right: 0px;
     left: 0px;
     z-index: 1;
 
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
     .mealheader {
         @include grid-column(6);
@@ -32,16 +36,17 @@ main {
 
     ul {
         padding: 0px;
-        margin-top: 170px;
+        margin-top: 60px;
 
         li {
+            @include grid-row();
             list-style: none;
-            margin-top: 15px;
+            margin-top: 10px;
+            background-color: white;
+            opacity: .7;
+            border-radius: 10px;
 
             .box {
-                @include grid-row();
-                background-color: white;
-                opacity: .7;
                 margin-left: 10px;
                 margin-right: 10px;
                 border-radius: 10px;
@@ -52,9 +57,10 @@ main {
                 border-color: white;
                 
                 h2 {
-                    line-height: 100%;
-                    font-size: 2.5rem;
+                    font-size: 1.5rem;
                     vertical-align: middle;
+                    margin: 0px;
+                    padding: 10px;
                 }
 
                 .meal {
@@ -77,16 +83,19 @@ main {
                 .arrow {
                     background-color: #FFCB47;
                     color: white;
-                    height: 120px;
-                    // padding-top: 40px;
-                    // padding-bottom: 40px;
+                    // height: 100%;
+                    padding: 0px;
                     margin: 0 auto;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     text-align: center;
+                    position: relative;
+                    left: 12px;
+                    bottom: 1px;
+                    padding: 10px;
 
                     .fa {
-                        padding-top: 40px;
+                        // padding-top: 20px;
                     }
                 }
             }

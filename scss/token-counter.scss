@@ -5,23 +5,20 @@
         display: inline-block;
         background-color:  #FFCB47;
         color: white;
-        font-size: 2em;
-        width: 70px;
-        height: 70px;
+        font-size: .9rem;
+        width: 30px;
+        height: 30px;
         border-radius: 100%;
         text-align: center;
-        line-height: 75px;
         vertical-align: middle;
         font-weight: bolder;
-        margin-bottom: 40px;
+        padding-top: 5px;
     }
 
     p.text {
         display: inline-block;
         color: white;
-        font-size: 2em;
-        line-height: 75px;
+        font-size: .9rem;
         font-weight: bolder;
-        padding-right: 10px;
     }
 }

@@ -5,37 +5,23 @@
         @include grid-column(10);
         @include  grid-column-offset(1);
         text-align: center;
-        margin-top: 5%;
-        margin-bottom: 15%;
+        margin-top: 20px;
+        // margin-bottom: ;
+
 
         a {
             display: block;
             width: 100%;
             text-decoration: none;
             background-color: #FFCB47;
-            padding: 20px;
+            padding: 10px;
             color: white;
             font-weight: bold;
             border-radius: 70px;
-            font-size: 4em;
-            margin-top: 60px;
+            font-size: 2em;
+            margin-top: 30px;
         }
 
-    }
-
-    .status {
-
-        h2 {
-            @include grid-column(12);
-            color: white;
-            margin: 0px;
-            margin-left: 30px;
-            font-size: 3rem;
-        }
-
-        .cooked {
-            margin-top: 50px;
-        }
     }
     
 }

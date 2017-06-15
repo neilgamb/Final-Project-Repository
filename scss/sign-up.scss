@@ -5,19 +5,17 @@
         @include grid-column(12);
         text-align: center;
         color: white;
-        font-size: 5rem;
-        margin-top: 20%;
-        margin-bottom: 5%;
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
 
     p {
         @include grid-column(10);
         @include grid-column-offset(1);
-        font-size: 2rem;
-        margin-top: 40px;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        margin-left: 120px;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        margin-top: 10px;
         color: white;
 
     }
@@ -27,8 +25,8 @@
         @include grid-column-offset(1);
         border: none;
         opacity: .6;
-        padding: 20px;
-        font-size: 3.2em;
+        padding: 15px;
+        font-size: 1.2em;
         border-radius: 70px;
         color: white;
     }
@@ -38,7 +36,7 @@
     }
 
     input, select, textarea{
-        padding-left: 50px;
+        padding-left: 20px;
         background-color: #6C888D;
     }
 
@@ -49,12 +47,12 @@
         margin-bottom: 30px;
         text-decoration: none;
         background-color: #FFCB47;
-        padding: 20px;
+        padding: 10px;
         color: white;
         font-weight: bold;
         border-radius: 70px;
-        font-size: 4em;
-        margin-top: 50px;
+        font-size: 1.3em;
+        margin-top: 20px;
     }
 
     h2 {

@@ -4,17 +4,17 @@
     div.logo {
         @include grid-column(12);
         color: white;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 10px;
+        margin-bottom: 20px;
         text-align: center;
 
         img {
-            width: 40%;
+            width: 150px;
         }
 
         h1 {
             margin: 0px;
-            font-size: 8rem;
+            font-size: 4.5em;
             font-family: 'Handlee', cursive;
         }
     }
@@ -27,21 +27,21 @@
 
         div {
             color: white;
-            padding-left: 20px;
-            margin: 10px;
+            // padding-left: 20px;
+            // margin: 10px;
 
             .fa {
-                margin-right: 10px;
-                font-size: 3.2rem;
+                // margin-right: 10px;
+                font-size: 2rem;
             }
 
             .username, .password {
-                width: 90%;
+                width: 80%;
                 border: none;
                 background: transparent;
-                margin-top: 20px;
+                // margin-top: 20px;
                 padding: 20px;
-                font-size: 3.2rem;
+                font-size: 1.5rem;
             }
 
             ::-webkit-input-placeholder { /* Chrome */
@@ -60,14 +60,18 @@
             margin-bottom: 30px;    
             text-decoration: none;
             background-color: #FFCB47;
-            padding: 20px;
+            padding: 10px;
             color: white;
             font-weight: bold;
             border-radius: 70px;
-            font-size: 4em;
-            margin-top: 50px;
-            width: 100%;
+            font-size: 2em;
+            margin-top: 20px;
+            width: 80%;
         }
+
+        button:last-child:not(:first-child) {
+            float: none; 
+        }       
     }
 
     p {
@@ -75,16 +79,37 @@
         display: block;
         text-align: center;
         color: white;
-        font-size: 2.5em;
-        position: absolute;
+        font-size: .8em;
+        position: fixed;
         bottom: 0px;
-        margin-top: 25%;
+        left: 0px
+        // margin-top: 15%;/
 
         a {
             color: #4A5043;
         }
+
     }
+
+
+
 }
 
 
 
+
+//Media Queries 
+
+// @media (min-width: 640px){
+
+//     div.logo {
+//         @include grid-column(6);
+//         @include grid-column-offset(3);
+//     }
+
+//     // div.login {
+//     //     @include grid-column(4);
+//     //     @include grid-column-offset(4);
+//     // }
+    
+// }

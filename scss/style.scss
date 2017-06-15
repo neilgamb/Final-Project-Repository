@@ -1,7 +1,7 @@
 @import 'node_modules/foundation-sites/scss/foundation';
 @include foundation-global-styles;
 @include foundation-grid;
-$grid-row-width: 100em;
+$grid-row-width: 50rem;
 
 $small: 640px;
 $med: 980px;
