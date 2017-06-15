@@ -4,18 +4,19 @@
     h1 {
         @include grid-column(12);
         color: white;
-        font-size: 4.5rem;
+        font-size: 2rem;
         border-radius: 20px;
         text-align: center;
         margin-bottom: 0px;
+        margin-top: 10px;
     }
 
     .subtitle {
         @include grid-column(12);
         text-align: center;
         color: white;
-        font-size: 3rem;
-        margin-bottom: 30px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
 
         h3, .recipe {
             display: inline;
@@ -30,8 +31,8 @@
     .left, .right {
         @include grid-column(7);
         @include grid-column-offset(1);
-        padding: 15px;
-        font-size: 2.5rem;
+        padding: 10px;
+        font-size: .8rem;
         background-color: #52686C;
         color: white; 
         opacity: .6;   
@@ -55,6 +56,7 @@
     #bottomleft {
         border-bottom-left-radius: 20px;
         border-top: solid;
+        border-width: 1px;
     }
 
     #topright {
@@ -64,23 +66,26 @@
     #bottomright {
         border-bottom-right-radius: 20px;
         border-top: solid;
+        border-width: 1px;
         border-top-color: lightgray;
+        padding: 8px;
     }
 
     #map {
         @include grid-column(10);
         @include grid-column-offset(1);
-        margin-top: 30px;
+        margin-top: 10px;
         border-radius: 20px;
-        height: 550px;
+        height: 200px;
     }
 
     select {
         border: none;
+        font-size: .4rem;
+    }
 
-        optgroup {
-            font-size: 1rem;
-        }
+    input {
+        font-size: .4rem;
     }
 
     button {
@@ -89,12 +94,13 @@
         display: block;  
         text-decoration: none;
         background-color: #FFCB47;
-        padding: 20px;
+        padding: 5px;
         color: white;
         font-weight: bold;
         border-radius: 70px;
-        font-size: 4em;
-        margin-top: 40px;
+        font-size: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }   
 

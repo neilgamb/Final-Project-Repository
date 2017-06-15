@@ -1,6 +1,5 @@
 .cook {
     @include grid-row();
-    margin: 0px;
 
     div.logo {
         @include grid-column(12);
@@ -12,6 +11,7 @@
             width: 150px;
         }
     }
+    
 
     div.newMeal {
         @include grid-column(10);
@@ -24,7 +24,6 @@
             margin-top: 5px;
             color: white;
             padding-left: 20px;
-            // padding-left: 25px;
         }
 
         input, select, textarea {

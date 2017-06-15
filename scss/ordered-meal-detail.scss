@@ -4,18 +4,20 @@
     h1 {
         @include grid-column(12);
         color: white;
-        font-size: 4.5rem;
+        font-size: 2rem;
         border-radius: 20px;
         text-align: center;
         margin-bottom: 0px;
+        margin-top: 10px;
     }
 
     .subtitle {
         @include grid-column(12);
         text-align: center;
         color: white;
-        font-size: 3rem;
-        margin-bottom: 30px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+
 
         h3, .recipe {
             display: inline;
@@ -30,8 +32,8 @@
     .left, .right {
         @include grid-column(7);
         @include grid-column-offset(1);
-        padding: 15px;
-        font-size: 2.5rem;
+        padding: 10px;
+        font-size: .8rem;
         background-color: #52686C;
         color: white; 
         opacity: .6;   
@@ -59,12 +61,13 @@
     }
 
     #map {
-    @include grid-column(10);
-    @include grid-column-offset(1);
-    margin-top: 30px;
-    border-radius: 20px;
-    height: 550px;
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        margin-top: 10px;
+        border-radius: 20px;
+        height: 200px;
     }
+
 
     .address {
         @include grid-row();
@@ -79,13 +82,13 @@
             float: left !important;
         }
 
-        h2 {
-                
+        h2 {      
             background-color: #52686C;
             margin-bottom: 0px;
+            margin-top: 10px;
             color: white;
             text-align: left;
-            font-size: 2.5rem;
+            font-size: 1rem;
             font-weight: 400;
             border-radius: 0px;
             border-top-left-radius: 20px;
@@ -97,21 +100,13 @@
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
 
-            h3 {
-                font-size: 2.5rem;
-                margin-top: 10px;
-                margin-bottom: 0px;
-                display: inline-block;
-                font-weight: 400;
-            }
-
             .location {
                 width: 100%;
                 text-align: center;
 
                 p {
                     display: inline-block;
-                    font-size: 2rem;
+                    font-size: .8rem;
                     margin: 0px;
                     vertical-align: middle;
                     margin-top: 10px;
@@ -140,11 +135,11 @@
 
         h2 {
             background-color: #52686C;
-            margin-bottom: 0px;
             margin-top: 0px;
+            margin-bottom: 0px;
             color: white;
             text-align: left;
-            font-size: 2.5rem;
+            font-size: 1rem;
             font-weight: 400;
             border-radius: 0px;
             border-top-left-radius: 20px;
@@ -156,16 +151,19 @@
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             display: inline-block;
+            padding-bottom: 10px;
             // justify-content: space-between;
 
             p {
                 // flex-direction: row;
+                width: 100%;
+                text-align: center;
                 display: inline-block;
-                font-size: 2rem;
+                font-size: .8rem;
                 margin: 0px;
                 vertical-align: middle;
-                margin-top: 10px;
-                margin-bottom: 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
             }
 
             select {
@@ -176,6 +174,7 @@
                 margin-left: 20px;
                 margin-top: 10px;
             }
+            
         }
     }
 
@@ -185,12 +184,13 @@
         display: block;  
         text-decoration: none;
         background-color: #FFCB47;
-        padding: 20px;
+        padding: 10px;
         color: white;
         font-weight: bold;
         border-radius: 70px;
-        font-size: 4em;
-        margin-top: 40px;
+        font-size: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .ratingSubmission:last-child:not(:first-child) {

@@ -5,15 +5,15 @@
         @include grid-column(12);
         text-align: center;
         color: white;
-        font-size: 3rem;
-        margin-top: 200px;
+        font-size: 1.5rem;
+        margin-top: 50px;
     }
 
     button.home {
         @include grid-column(8);
         @include grid-column-offset(2);
         display: block;  
-        margin-top: 200px;
+        margin-top: 50px;
         margin-bottom: 30px;
         text-decoration: none;
         background-color: #FFCB47;
@@ -21,7 +21,7 @@
         color: white;
         font-weight: bold;
         border-radius: 70px;
-        font-size: 3em;
+        font-size: 1.5em;
     }
 }
 

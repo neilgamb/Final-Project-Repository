@@ -57,7 +57,7 @@ main {
                 border-color: white;
                 
                 h2 {
-                    font-size: 1.5rem;
+                    font-size: .8rem;
                     vertical-align: middle;
                     margin: 0px;
                     padding: 10px;
@@ -76,14 +76,9 @@ main {
                     @include grid-column(1);
                 }
 
-                .servings {
-                    padding: 0px;
-                }
-
                 .arrow {
                     background-color: #FFCB47;
                     color: white;
-                    // height: 100%;
                     padding: 0px;
                     margin: 0 auto;
                     border-top-right-radius: 10px;
@@ -93,10 +88,6 @@ main {
                     left: 12px;
                     bottom: 1px;
                     padding: 10px;
-
-                    .fa {
-                        // padding-top: 20px;
-                    }
                 }
             }
         }

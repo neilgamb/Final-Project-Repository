@@ -5,8 +5,7 @@
    <ul>
         <li class="ordereditems" ng-repeat="meal in orderedMeals">
             <div class="description">
-                <p><span class="meal">{{ meal.name }}</span> from</p>
-                <p><span class="cook">{{ meal.user.username }}</span></p>
+                <p><span class="meal">{{ meal.name }}</span></p>
             </div>
             <div class="check">
                 <button ng-click="toOrderedMealDetail({mealID: meal.id})"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>   
