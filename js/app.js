@@ -172,3 +172,29 @@ app.component('orderedMealDetailPage', {
 app.component('pageheader', {
     templateUrl: 'templates/pageheader.html',
 })
+
+window.addEventListener('load', function() {
+
+/* Nav Bars - When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+    let navigation = document.querySelector('.fa');
+    navigation.addEventListener('click', function(){
+        console.log('test');
+        document.getElementById("myDropdown").classList.toggle("show");
+});
+
+});
+
+window.onclick = function(event) {
+  if (!event.target.matches('.fa')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
